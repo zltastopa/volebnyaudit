@@ -106,7 +106,8 @@
     }
   });
 
-  /* table filters: text box + chip groups (data-filter-key on the chip group, data-<key> on rows) */
+  /* table filters: text box + chip groups (data-filter-key on the chip group, data-<key> on rows); the state is
+     kept in the query string (?q=…&tier=…) so a filtered view can be shared */
   document.querySelectorAll("[data-table-filter]").forEach(function (box) {
     var table = document.getElementById(box.getAttribute("data-table-filter"));
     if (!table) return;
@@ -114,8 +115,8 @@
     var text = rows.map(function (r) { return fold(r.textContent); });
     var input = box.querySelector("input[type=search]");
     var out = box.querySelector("[aria-live]");
-    var state = {};
-    function apply() {
+    var state = {}, params = new URLSearchParams(location.search);
+    function apply(save) {
       var q = input ? fold(input.value) : "", n = 0;
       rows.forEach(function (r, i) {
         var ok = !q || text[i].indexOf(q) !== -1;
@@ -123,20 +124,31 @@
         r.hidden = !ok; if (ok) n++;
       });
       if (out) out.textContent = "Zobrazené riadky: " + n + " z " + rows.length;
+      if (save && history.replaceState) {
+        var p = new URLSearchParams(location.search);
+        if (input && input.value.trim()) p.set("q", input.value.trim()); else p.delete("q");
+        for (var k2 in state) if (state[k2]) p.set(k2, state[k2]); else p.delete(k2);
+        var s = p.toString();
+        history.replaceState(null, "", location.pathname + (s ? "?" + s : "") + location.hash);
+      }
+    }
+    function press(group, b) {
+      group.querySelectorAll("button").forEach(function (x) { x.setAttribute("aria-pressed", "false"); });
+      b.setAttribute("aria-pressed", "true");
+      state[group.getAttribute("data-filter-key")] = b.getAttribute("data-value") || "";
     }
     box.querySelectorAll("[data-filter-key]").forEach(function (group) {
-      var key = group.getAttribute("data-filter-key");
+      var want = params.get(group.getAttribute("data-filter-key"));
       group.querySelectorAll("button").forEach(function (b) {
-        b.addEventListener("click", function () {
-          group.querySelectorAll("button").forEach(function (x) { x.setAttribute("aria-pressed", "false"); });
-          b.setAttribute("aria-pressed", "true");
-          state[key] = b.getAttribute("data-value") || "";
-          apply();
-        });
+        if (want && b.getAttribute("data-value") === want) press(group, b);
+        b.addEventListener("click", function () { press(group, b); apply(true); });
       });
     });
-    if (input) input.addEventListener("input", apply);
+    if (input) {
+      if (params.get("q")) input.value = params.get("q");
+      input.addEventListener("input", function () { apply(true); });
+    }
     box.hidden = false;
-    apply();
+    apply(false);
   });
 })();
