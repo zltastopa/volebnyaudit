@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="sk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<title>Nálezy – Volebný audit</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#obsah">Preskočiť na obsah</a>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="index.html">Volebný audit<small>komunálne a krajské voľby</small></a>
+    <nav aria-label="Hlavná navigácia">
+      <ul>
+        <li><a href="index.html">Prehľad</a></li>
+        <li><a href="nalezy.html" aria-current="page">Nálezy</a></li>
+        <li><a href="okresy.html">Okresy</a></li>
+        <li><a href="tesne.html">Tesné výsledky</a></li>
+        <li><a href="2026.html">Voľby 2026</a></li>
+        <li><a href="metodika.html">Metodika</a></li>
+        <li><a href="o-projekte.html">O projekte</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="obsah" class="wrap">
+<p class="crumbs"><a href="index.html">Prehľad</a> / Nálezy</p><h1>Nálezy</h1><p class="lede">Jeden riadok je jeden nález jedného detektora. Viac nálezov na tom istom okrsku a súboji tvorí prípad; odkaz vedie na jeho podrobnú stránku.</p><div class="caveat"><p>Nález je štatistická alebo aritmetická anomália, nie potvrdená chyba. Stupeň C znamená signál, ktorý má často celkom bežné vysvetlenie.</p></div><div id="findings-app" data-root=""><form class="filters" role="search" aria-label="Filtre nálezov"><label class="wide">Hľadať obec, kandidáta alebo súboj<input type="search" name="q" placeholder="napr. Žehra alebo Kapuš" autocomplete="off"></label><div class="wide"><button type="button" class="btn reset">Zrušiť filtre</button></div></form><p class="result-count" aria-live="polite"></p><div class="scroll" tabindex="0" role="region" aria-label="Tabuľka nálezov"><table class="tbl"><thead><tr><th scope="col" data-key="y" class="n">Rok</th><th scope="col" data-key="m">Obec</th><th scope="col" data-key="c">Súboj a okrsok</th><th scope="col" data-key="cand">Kandidáti</th><th scope="col" data-key="d">Detektor a mechanizmus</th><th scope="col" data-key="t">Stupeň</th><th scope="col" data-key="oc">Vplyv</th><th scope="col" data-key="v">Kritická kontrola</th><th scope="col" data-key="q" class="n">q</th><th scope="col" data-key="r">Prípad</th></tr></thead><tbody></tbody></table></div><p><button type="button" class="btn more" hidden>Zobraziť ďalšie</button></p></div><p class="small muted">q: podiel falošných objavov pri hodnote tohto nálezu (nižšie = výraznejšia anomália); aritmetické kontroly ho nemajú. Filtre si stránka pamätá v adrese, takže odkaz na filtrovaný pohľad možno poslať ďalej.</p>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <p><strong>Štatistická anomália nie je dôkazom chyby. Chyba v zázname nie je dôkazom podvodu ani úmyslu.</strong>
+    Každý nález je hypotéza; potvrdiť ju alebo vyvrátiť možno len porovnaním s originálnou zápisnicou okrskovej volebnej komisie.</p>
+    <p>Nezávislý audit, nie oficiálny výsledok volieb. Zdroj údajov: Štatistický úrad SR. Údaje 2022: definitívne výsledky stiahnuté 25. 10. 2026; 2026: definitívne výsledky stiahnuté 26. 10. 2026. Verzia kódu 609365d86c08 + neuložené zmeny kódu. Stránka vygenerovaná 26. 10. 2026 15:00 UTC.</p>
+    <p><a href="o-projekte.html#ako-citat">Ako čítať tieto výsledky</a> · <a href="o-projekte.html#povod-udajov">Pôvod údajov</a> · <a href="o-projekte.html#kontakt">Kontakt a opravy</a></p>
+  </div>
+</footer>
+<script src="assets/app.js"></script>
+<script src="data/findings.js"></script>
+</body>
+</html>

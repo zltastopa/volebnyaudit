@@ -1,0 +1,3287 @@
+{
+ "years": {
+  "2022": {
+   "data": {
+    "contests": 6519,
+    "contests_by_kind": {
+     "council": 3501,
+     "mayor": 2914,
+     "president": 8,
+     "regional_council": 96
+    },
+    "vote_records": 25201,
+    "vote_rows": 479409,
+    "turnout_records": 12604,
+    "turnout_by_family": {
+     "OSK": 6010,
+     "OSO": 6002,
+     "OSO_CITY": 592
+    },
+    "contests_with_votes_by_kind": {
+     "council": 3500,
+     "mayor": 2913,
+     "president": 8,
+     "regional_council": 96
+    },
+    "single_precinct_by_kind": {
+     "council": 2639,
+     "mayor": 2281
+    },
+    "reconstruction_status": {
+     "match": 6407,
+     "match_new_election": 7,
+     "match_tie": 102,
+     "mismatch": 1,
+     "no_votes": 2
+    },
+    "council_ties_by_rule": {
+     "lot": 85,
+     "party_list_order": 17
+    },
+    "vacant_seats_reconstruction": 61,
+    "vacant_districts_reconstruction": 32,
+    "vacant_seats": 61,
+    "vacant_districts": 32,
+    "margin1_by_kind": {
+     "council": 266,
+     "mayor": 10
+    },
+    "margin2_by_kind": {
+     "council": 197,
+     "mayor": 17
+    },
+    "margin0_by_kind": {
+     "council": 102,
+     "mayor": 7
+    }
+   },
+   "checks": {
+    "hard_violations": 34,
+    "hard_by_check": {
+     "K_ELECTED_COUNT": 1,
+     "X_CITY_BOROUGH_ENVELOPES": 20,
+     "X_CITY_BOROUGH_PARTICIPATED": 8,
+     "X_CITY_BOROUGH_REGISTERED": 5
+    },
+    "city_borough_field_pairs": 33,
+    "city_borough_precincts": 24,
+    "city_borough_by_city": {
+     "Bratislava": {
+      "pairs": 22,
+      "precincts": 18
+     },
+     "Košice": {
+      "pairs": 11,
+      "precincts": 6
+     }
+    },
+    "hard_identities_other_than_city_borough_min_hold_rate": 1.0,
+    "soft_by_check": {
+     "D_DUP_VOTE_VECTOR": 2,
+     "K_CONTEST_WITHOUT_RESULTS": 2,
+     "K_MUNICIPALITY_WITHOUT_RESULTS": 1,
+     "S_LOW_UTILISATION": 12,
+     "S_ONE_VOTE_PER_BALLOT": 4,
+     "S_PE_GAP": 13,
+     "S_SINGLE_TIE_NO_WINNER": 7,
+     "S_TURNOUT_100": 1,
+     "S_UNFILLED_SEATS": 32,
+     "S_WITHDRAWN_VOTES": 200,
+     "S_ZERO_INVALID": 156,
+     "X_OSK_BALLOT_SHORTFALL": 4,
+     "X_OSO_OSK_PARTICIPATION": 76,
+     "X_OSO_OSK_REGISTERED": 21
+    }
+   },
+   "register": {
+    "findings": 623,
+    "findings_by_tier": {
+     "A_arithmetic": 40,
+     "B_strong": 85,
+     "C_ambiguous": 498
+    },
+    "findings_by_mechanism_group": [
+     {
+      "group": "contradiction between official records",
+      "label": "city vs borough record (`X_CITY_BOROUGH_*`)",
+      "A_arithmetic": 33,
+      "B_strong": 0,
+      "C_ambiguous": 0,
+      "total": 33
+     },
+     {
+      "group": "contradiction between official records",
+      "label": "elected flags vs seats filled (`K_ELECTED_COUNT`)",
+      "A_arithmetic": 1,
+      "B_strong": 0,
+      "C_ambiguous": 0,
+      "total": 1
+     },
+     {
+      "group": "turnout forms",
+      "label": "one-keystroke error in a turnout field (`turnout_digit`)",
+      "A_arithmetic": 6,
+      "B_strong": 11,
+      "C_ambiguous": 21,
+      "total": 38
+     },
+     {
+      "group": "turnout forms",
+      "label": "field copied from another form (`copy_from_*`)",
+      "A_arithmetic": 0,
+      "B_strong": 1,
+      "C_ambiguous": 3,
+      "total": 4
+     },
+     {
+      "group": "turnout forms",
+      "label": "unexplained turnout relation (`other`, `novel_turnout`)",
+      "A_arithmetic": 0,
+      "B_strong": 0,
+      "C_ambiguous": 10,
+      "total": 10
+     },
+     {
+      "group": "turnout forms",
+      "label": "participation-rate anomaly, no edit proposed (`joint`)",
+      "A_arithmetic": 0,
+      "B_strong": 0,
+      "C_ambiguous": 63,
+      "total": 63
+     },
+     {
+      "group": "values moved inside a vote record",
+      "label": "`row_shift`",
+      "A_arithmetic": 0,
+      "B_strong": 36,
+      "C_ambiguous": 28,
+      "total": 64
+     },
+     {
+      "group": "values moved inside a vote record",
+      "label": "`swap`",
+      "A_arithmetic": 0,
+      "B_strong": 10,
+      "C_ambiguous": 44,
+      "total": 54
+     },
+     {
+      "group": "values moved inside a vote record",
+      "label": "`transfer`",
+      "A_arithmetic": 0,
+      "B_strong": 0,
+      "C_ambiguous": 9,
+      "total": 9
+     },
+     {
+      "group": "values moved inside a vote record",
+      "label": "`vector_swap` (two precincts exchanged)",
+      "A_arithmetic": 0,
+      "B_strong": 0,
+      "C_ambiguous": 6,
+      "total": 6
+     },
+     {
+      "group": "values moved inside a vote record",
+      "label": "`sorted_record` (totals written in sorted order)",
+      "A_arithmetic": 0,
+      "B_strong": 1,
+      "C_ambiguous": 3,
+      "total": 4
+     },
+     {
+      "group": "digit errors",
+      "label": "`digit_sub`, `transposition`",
+      "A_arithmetic": 0,
+      "B_strong": 0,
+      "C_ambiguous": 116,
+      "total": 116
+     },
+     {
+      "group": "digit errors",
+      "label": "`digit_ins`",
+      "A_arithmetic": 0,
+      "B_strong": 1,
+      "C_ambiguous": 52,
+      "total": 53
+     },
+     {
+      "group": "digit errors",
+      "label": "`digit_del`",
+      "A_arithmetic": 0,
+      "B_strong": 0,
+      "C_ambiguous": 21,
+      "total": 21
+     },
+     {
+      "group": "missing, duplicated or copied blocks",
+      "label": "`missing_block`",
+      "A_arithmetic": 0,
+      "B_strong": 17,
+      "C_ambiguous": 58,
+      "total": 75
+     },
+     {
+      "group": "missing, duplicated or copied blocks",
+      "label": "`duplicate_block`, `duplicate_vector`",
+      "A_arithmetic": 0,
+      "B_strong": 0,
+      "C_ambiguous": 18,
+      "total": 18
+     },
+     {
+      "group": "missing, duplicated or copied blocks",
+      "label": "another contest's record typed in (`cross_contest_copy`, `duplicate_cross_contest`)",
+      "A_arithmetic": 0,
+      "B_strong": 2,
+      "C_ambiguous": 0,
+      "total": 2
+     },
+     {
+      "group": "missing, duplicated or copied blocks",
+      "label": "part of the record missing (`partial_omission`, `party_block_missing`, `block_scale`)",
+      "A_arithmetic": 0,
+      "B_strong": 5,
+      "C_ambiguous": 15,
+      "total": 20
+     },
+     {
+      "group": "ballot-mark arithmetic and zeros",
+      "label": "`full_marks`, `one_mark_per_ballot`, `top_of_ballot_voting`",
+      "A_arithmetic": 0,
+      "B_strong": 1,
+      "C_ambiguous": 8,
+      "total": 9
+     },
+     {
+      "group": "ballot-mark arithmetic and zeros",
+      "label": "more zeros than the model allows (`globaltests` `zero_excess`)",
+      "A_arithmetic": 0,
+      "B_strong": 0,
+      "C_ambiguous": 6,
+      "total": 6
+     },
+     {
+      "group": "cross-election profile",
+      "label": "cell anomaly, no edit proposed (`crossyear`)",
+      "A_arithmetic": 0,
+      "B_strong": 0,
+      "C_ambiguous": 17,
+      "total": 17
+     }
+    ],
+    "unmapped_mechanisms": [],
+    "findings_by_detector_tier": {
+     "checks": {
+      "A_arithmetic": 34,
+      "B_strong": 0,
+      "C_ambiguous": 0
+     },
+     "crossballot": {
+      "A_arithmetic": 0,
+      "B_strong": 21,
+      "C_ambiguous": 258
+     },
+     "crossyear": {
+      "A_arithmetic": 0,
+      "B_strong": 2,
+      "C_ambiguous": 23
+     },
+     "errorsearch": {
+      "A_arithmetic": 0,
+      "B_strong": 6,
+      "C_ambiguous": 45
+     },
+     "globaltests": {
+      "A_arithmetic": 0,
+      "B_strong": 0,
+      "C_ambiguous": 6
+     },
+     "joint": {
+      "A_arithmetic": 0,
+      "B_strong": 5,
+      "C_ambiguous": 83
+     },
+     "novel_dup": {
+      "A_arithmetic": 0,
+      "B_strong": 8,
+      "C_ambiguous": 34
+     },
+     "novel_turnout": {
+      "A_arithmetic": 6,
+      "B_strong": 9,
+      "C_ambiguous": 18
+     },
+     "novel_util": {
+      "A_arithmetic": 0,
+      "B_strong": 1,
+      "C_ambiguous": 11
+     },
+     "record_shortfall": {
+      "A_arithmetic": 0,
+      "B_strong": 5,
+      "C_ambiguous": 11
+     },
+     "slates": {
+      "A_arithmetic": 0,
+      "B_strong": 6,
+      "C_ambiguous": 5
+     },
+     "sorted_record": {
+      "A_arithmetic": 0,
+      "B_strong": 1,
+      "C_ambiguous": 3
+     },
+     "withdrawn": {
+      "A_arithmetic": 0,
+      "B_strong": 21,
+      "C_ambiguous": 1
+     }
+    },
+    "infeasible_corrections_by_detector": {
+     "crossballot": 2,
+     "errorsearch": 2,
+     "joint": 5,
+     "novel_dup": 14
+    },
+    "infeasible_corrections": 23,
+    "demoted_B_to_C": 2,
+    "crossballot_findings": 279,
+    "crossballot_correction_withheld": 227,
+    "cases": 493,
+    "cases_by_tier": {
+     "A_arithmetic": 25,
+     "B_strong": 52,
+     "C_ambiguous": 416
+    },
+    "cases_by_kind": {
+     "turnout_form": 116,
+     "council": 120,
+     "mayor": 47,
+     "president": 34,
+     "regional_council": 176
+    },
+    "cases_by_n_families": {
+     "1": 446,
+     "2": 45,
+     "3": 2
+    },
+    "cases_by_outcome_class": {
+     "0_not_vote_level": 116,
+     "1_changes_elected": 5,
+     "2_could_change": 23,
+     "3_no_change": 349
+    },
+    "cases_reviewed": 114,
+    "verdict_by_tier": {
+     "confirmed_error": {
+      "A_arithmetic": 25,
+      "B_strong": 30,
+      "C_ambiguous": 4
+     },
+     "probable_error": {
+      "A_arithmetic": 0,
+      "B_strong": 18,
+      "C_ambiguous": 6
+     },
+     "inconclusive": {
+      "A_arithmetic": 0,
+      "B_strong": 1,
+      "C_ambiguous": 3
+     },
+     "probable_genuine": {
+      "A_arithmetic": 0,
+      "B_strong": 2,
+      "C_ambiguous": 12
+     },
+     "rejected": {
+      "A_arithmetic": 0,
+      "B_strong": 1,
+      "C_ambiguous": 12
+     }
+    },
+    "held_by_tier": {
+     "A_arithmetic": {
+      "held": 25,
+      "not_held": 0,
+      "inconclusive": 0
+     },
+     "B_strong": {
+      "held": 48,
+      "not_held": 3,
+      "inconclusive": 1
+     },
+     "C_ambiguous": {
+      "held": 10,
+      "not_held": 24,
+      "inconclusive": 3
+     }
+    },
+    "unreviewed": 379,
+    "unreviewed_by_tier_class": [
+     {
+      "tier": "C_ambiguous",
+      "class": "0_not_vote_level",
+      "n": 82
+     },
+     {
+      "tier": "C_ambiguous",
+      "class": "3_no_change",
+      "n": 297
+     }
+    ],
+    "unreviewed_AB_or_class12": [],
+    "reviewed_cases_per_detector": {
+     "checks": {
+      "held": 25,
+      "not_held": 0,
+      "inconclusive": 0
+     },
+     "crossballot": {
+      "held": 35,
+      "not_held": 16,
+      "inconclusive": 2
+     },
+     "crossyear": {
+      "held": 12,
+      "not_held": 0,
+      "inconclusive": 0
+     },
+     "errorsearch": {
+      "held": 33,
+      "not_held": 3,
+      "inconclusive": 0
+     },
+     "globaltests": {
+      "held": 0,
+      "not_held": 0,
+      "inconclusive": 0
+     },
+     "joint": {
+      "held": 12,
+      "not_held": 1,
+      "inconclusive": 1
+     },
+     "novel_dup": {
+      "held": 7,
+      "not_held": 2,
+      "inconclusive": 1
+     },
+     "novel_turnout": {
+      "held": 15,
+      "not_held": 0,
+      "inconclusive": 1
+     },
+     "novel_util": {
+      "held": 4,
+      "not_held": 3,
+      "inconclusive": 1
+     },
+     "record_shortfall": {
+      "held": 6,
+      "not_held": 1,
+      "inconclusive": 0
+     },
+     "slates": {
+      "held": 7,
+      "not_held": 2,
+      "inconclusive": 0
+     },
+     "sorted_record": {
+      "held": 2,
+      "not_held": 2,
+      "inconclusive": 0
+     },
+     "withdrawn": {
+      "held": 22,
+      "not_held": 0,
+      "inconclusive": 0
+     }
+    },
+    "class12_cases": [
+     {
+      "case_id": "2022-OSK-C-611|518158-4",
+      "municipality": "Zvolen",
+      "tier": "B_strong",
+      "class": "1_changes_elected",
+      "verdict": "probable_error"
+     },
+     {
+      "case_id": "2022-OSO-C-506745-1|506745-3",
+      "municipality": "Trnava",
+      "tier": "B_strong",
+      "class": "1_changes_elected",
+      "verdict": "confirmed_error"
+     },
+     {
+      "case_id": "2022-OSO-C-510262-1|510262-6",
+      "municipality": "Liptovský Mikuláš",
+      "tier": "C_ambiguous",
+      "class": "1_changes_elected",
+      "verdict": "probable_error"
+     },
+     {
+      "case_id": "2022-OSO-C-514667-1|514667-1",
+      "municipality": "Drňa",
+      "tier": "B_strong",
+      "class": "1_changes_elected",
+      "verdict": "confirmed_error"
+     },
+     {
+      "case_id": "2022-OSO-C-518841-1|518841-1",
+      "municipality": "Súdovce",
+      "tier": "C_ambiguous",
+      "class": "1_changes_elected",
+      "verdict": "confirmed_error"
+     },
+     {
+      "case_id": "2022-OSK-C-117|508179-6",
+      "municipality": "Pezinok",
+      "tier": "B_strong",
+      "class": "2_could_change",
+      "verdict": "confirmed_error"
+     },
+     {
+      "case_id": "2022-OSK-C-403|556785-1",
+      "municipality": "Malé Chyndice",
+      "tier": "C_ambiguous",
+      "class": "2_could_change",
+      "verdict": "probable_genuine"
+     },
+     {
+      "case_id": "2022-OSK-C-601|508438-75",
+      "municipality": "Banská Bystrica",
+      "tier": "C_ambiguous",
+      "class": "2_could_change",
+      "verdict": "rejected"
+     },
+     {
+      "case_id": "2022-OSK-C-611|518158-19",
+      "municipality": "Zvolen",
+      "tier": "C_ambiguous",
+      "class": "2_could_change",
+      "verdict": "probable_genuine"
+     },
+     {
+      "case_id": "2022-OSK-C-703|524000-1",
+      "municipality": "Veľká Lomnica",
+      "tier": "C_ambiguous",
+      "class": "2_could_change",
+      "verdict": "rejected"
+     },
+     {
+      "case_id": "2022-OSK-C-807|523283-1",
+      "municipality": "Vrbnica",
+      "tier": "C_ambiguous",
+      "class": "2_could_change",
+      "verdict": "probable_genuine"
+     },
+     {
+      "case_id": "2022-OSK-C-810|526657-2",
+      "municipality": "Žehra",
+      "tier": "B_strong",
+      "class": "2_could_change",
+      "verdict": "inconclusive"
+     },
+     {
+      "case_id": "2022-OSO-C-502596-1|502596-1",
+      "municipality": "Nový Tekov",
+      "tier": "C_ambiguous",
+      "class": "2_could_change",
+      "verdict": "probable_genuine"
+     },
+     {
+      "case_id": "2022-OSO-C-508179-4|508179-17",
+      "municipality": "Pezinok",
+      "tier": "C_ambiguous",
+      "class": "2_could_change",
+      "verdict": "probable_genuine"
+     },
+     {
+      "case_id": "2022-OSO-C-510114-5|510114-5",
+      "municipality": "Tvrdošín",
+      "tier": "C_ambiguous",
+      "class": "2_could_change",
+      "verdict": "probable_genuine"
+     },
+     {
+      "case_id": "2022-OSO-C-511153-1|511153-1",
+      "municipality": "Vlachy",
+      "tier": "C_ambiguous",
+      "class": "2_could_change",
+      "verdict": "probable_genuine"
+     },
+     {
+      "case_id": "2022-OSO-C-518263-2|518263-4",
+      "municipality": "Detva",
+      "tier": "C_ambiguous",
+      "class": "2_could_change",
+      "verdict": "rejected"
+     },
+     {
+      "case_id": "2022-OSO-C-523828-1|523828-4",
+      "municipality": "Spišská Belá",
+      "tier": "C_ambiguous",
+      "class": "2_could_change",
+      "verdict": "inconclusive"
+     },
+     {
+      "case_id": "2022-OSO-C-525871-1|525871-1",
+      "municipality": "Krásnohorské Podhradie",
+      "tier": "C_ambiguous",
+      "class": "2_could_change",
+      "verdict": "probable_genuine"
+     },
+     {
+      "case_id": "2022-OSO-C-528722-1|528722-3",
+      "municipality": "Sečovce",
+      "tier": "B_strong",
+      "class": "2_could_change",
+      "verdict": "rejected"
+     },
+     {
+      "case_id": "2022-OSO-C-529320-5|529320-35",
+      "municipality": "Bratislava - Ružinov",
+      "tier": "C_ambiguous",
+      "class": "2_could_change",
+      "verdict": "confirmed_error"
+     },
+     {
+      "case_id": "2022-OSO-C-557340-1|557340-1",
+      "municipality": "Trenč",
+      "tier": "C_ambiguous",
+      "class": "2_could_change",
+      "verdict": "rejected"
+     },
+     {
+      "case_id": "2022-OSO-C-582000-6|529354-15",
+      "municipality": "Bratislava - Rača",
+      "tier": "C_ambiguous",
+      "class": "2_could_change",
+      "verdict": "probable_genuine"
+     },
+     {
+      "case_id": "2022-OSO-C-598186-3|598186-16",
+      "municipality": "Košice - Staré Mesto",
+      "tier": "B_strong",
+      "class": "2_could_change",
+      "verdict": "probable_error"
+     },
+     {
+      "case_id": "2022-OSO-C-599310-1|599310-1",
+      "municipality": "Chorváty",
+      "tier": "C_ambiguous",
+      "class": "2_could_change",
+      "verdict": "rejected"
+     },
+     {
+      "case_id": "2022-OSO-C-599816-2|599816-15",
+      "municipality": "Košice - Nad jazerom",
+      "tier": "C_ambiguous",
+      "class": "2_could_change",
+      "verdict": "inconclusive"
+     },
+     {
+      "case_id": "2022-OSO-C-599981-6|598194-1",
+      "municipality": "Košice - Lorinčík",
+      "tier": "C_ambiguous",
+      "class": "2_could_change",
+      "verdict": "rejected"
+     },
+     {
+      "case_id": "2022-OSO-M-543306|543306-1",
+      "municipality": "Lieskovany",
+      "tier": "C_ambiguous",
+      "class": "2_could_change",
+      "verdict": "rejected"
+     }
+    ],
+    "held_up": 83,
+    "held_up_vote_records": 50,
+    "held_up_vote_records_by_kind": {
+     "council": 16,
+     "mayor": 17,
+     "president": 8,
+     "regional_council": 9
+    },
+    "held_up_turnout_fields": 33,
+    "ba_mayor_records_with_error_held_up": 14,
+    "rates_per_1000": {
+     "vote_records": 25201,
+     "oso_vote_records": 13181,
+     "osk_vote_records": 12020,
+     "turnout_records": 12604,
+     "findings_all": 24.72,
+     "findings_vote_level": 484,
+     "findings_vote_level_per_1000": 19.21,
+     "findings_oso": 239,
+     "findings_oso_per_1000": 18.13,
+     "findings_osk": 245,
+     "findings_osk_per_1000": 20.38,
+     "findings_turnout": 139,
+     "findings_turnout_per_1000": 11.03,
+     "tier_per_1000": {
+      "A_arithmetic": 1.59,
+      "B_strong": 3.37,
+      "C_ambiguous": 19.76
+     },
+     "held_vote_per_1000": 1.98,
+     "held_turnout_per_1000": 2.62
+    }
+   },
+   "reviews": {
+    "files": 134,
+    "verdicts_all_files": {
+     "confirmed_error": 59,
+     "probable_error": 24,
+     "inconclusive": 5,
+     "probable_genuine": 18,
+     "rejected": 28
+    },
+    "attached_to_register_case": 114,
+    "verdicts_attached": {
+     "confirmed_error": 59,
+     "probable_error": 24,
+     "inconclusive": 4,
+     "probable_genuine": 14,
+     "rejected": 13
+    },
+    "not_register_cases": 20,
+    "verdicts_not_register_cases": {
+     "confirmed_error": 0,
+     "probable_error": 0,
+     "inconclusive": 1,
+     "probable_genuine": 4,
+     "rejected": 15
+    },
+    "changes_elected_true": [
+     {
+      "case_id": "2022-OSK-C-611|518158-4",
+      "verdict": "probable_error",
+      "attached": true,
+      "file": "2022-OSK-C-611__518158-4.json"
+     },
+     {
+      "case_id": "2022-OSO-C-506745-1|506745-3",
+      "verdict": "confirmed_error",
+      "attached": true,
+      "file": "2022-OSO-C-506745-1__506745-3.json"
+     },
+     {
+      "case_id": "2022-OSO-C-510262-1|510262-6",
+      "verdict": "probable_error",
+      "attached": true,
+      "file": "2022-OSO-C-510262-1__510262-6.json"
+     },
+     {
+      "case_id": "2022-OSO-C-514667-1|514667-1",
+      "verdict": "confirmed_error",
+      "attached": true,
+      "file": "2022-OSO-C-514667-1__514667-1.json"
+     },
+     {
+      "case_id": "2022-OSO-C-518841-1|518841-1",
+      "verdict": "confirmed_error",
+      "attached": true,
+      "file": "2022-OSO-C-518841-1__518841-1.json"
+     }
+    ]
+   },
+   "recount_watch": {
+    "contested_contests": 5191,
+    "listed": 1069,
+    "by_tier_kind": {
+     "tie": {
+      "council": 102,
+      "mayor": 7
+     },
+     "upper_band": {
+      "council": 356,
+      "mayor": 28,
+      "regional_council": 19
+     },
+     "within_band": {
+      "council": 525,
+      "mayor": 32
+     }
+    },
+    "us_trigger_only": 37,
+    "listed_invalid_route": 968,
+    "reversal_not_changing_seated": 111,
+    "first_out_standing": 321,
+    "first_out_independent_without_standing": 246,
+    "margin_0_or_1": 385,
+    "court_counted_listed": 15
+   },
+   "recount_watch_rate_sensitivity": {
+    "0.0061": 926,
+    "0.0105": 1218
+   }
+  },
+  "2026": {
+   "data": {
+    "contests": 6406,
+    "contests_by_kind": {
+     "council": 3382,
+     "mayor": 2920,
+     "president": 8,
+     "regional_council": 96
+    },
+    "vote_records": 25259,
+    "vote_rows": 407185,
+    "turnout_records": 12631,
+    "turnout_by_family": {
+     "OSK": 6029,
+     "OSO": 6024,
+     "OSO_CITY": 578
+    },
+    "contests_with_votes_by_kind": {
+     "council": 3382,
+     "mayor": 2920,
+     "president": 8,
+     "regional_council": 96
+    },
+    "single_precinct_by_kind": {
+     "council": 2518,
+     "mayor": 2273
+    },
+    "reconstruction_status": {
+     "match": 6294,
+     "match_new_election": 6,
+     "match_tie": 106
+    },
+    "council_ties_by_rule": {
+     "lot": 90,
+     "party_list_order": 16
+    },
+    "vacant_seats_reconstruction": 36,
+    "vacant_districts_reconstruction": 20,
+    "vacant_seats": 40,
+    "vacant_districts": 21,
+    "vacant_note": "reconstruction plus the vacancies the official split shows in Veľký Ďur (district_seats_check)",
+    "margin1_by_kind": {
+     "council": 221,
+     "mayor": 18,
+     "regional_council": 1
+    },
+    "margin2_by_kind": {
+     "council": 198,
+     "mayor": 17
+    },
+    "margin0_by_kind": {
+     "council": 106,
+     "mayor": 6
+    }
+   },
+   "checks": {
+    "hard_violations": 36,
+    "hard_by_check": {
+     "X_CITY_BOROUGH_ENVELOPES": 22,
+     "X_CITY_BOROUGH_PARTICIPATED": 7,
+     "X_CITY_BOROUGH_REGISTERED": 7
+    },
+    "city_borough_field_pairs": 36,
+    "city_borough_precincts": 33,
+    "city_borough_by_city": {
+     "Bratislava": {
+      "pairs": 26,
+      "precincts": 24
+     },
+     "Košice": {
+      "pairs": 10,
+      "precincts": 9
+     }
+    },
+    "hard_identities_other_than_city_borough_min_hold_rate": 1.0,
+    "soft_by_check": {
+     "S_LOW_UTILISATION": 12,
+     "S_ONE_VOTE_PER_BALLOT": 3,
+     "S_PE_GAP": 10,
+     "S_SINGLE_TIE_NO_WINNER": 6,
+     "S_TURNOUT_100": 2,
+     "S_UNFILLED_SEATS": 20,
+     "S_WITHDRAWN_VOTES": 168,
+     "S_ZERO_INVALID": 163,
+     "X_OSK_BALLOT_SHORTFALL": 4,
+     "X_OSO_OSK_PARTICIPATION": 67,
+     "X_OSO_OSK_REGISTERED": 29
+    }
+   },
+   "register": {
+    "findings": 578,
+    "findings_by_tier": {
+     "A_arithmetic": 47,
+     "B_strong": 36,
+     "C_ambiguous": 495
+    },
+    "findings_by_mechanism_group": [
+     {
+      "group": "contradiction between official records",
+      "label": "city vs borough record (`X_CITY_BOROUGH_*`)",
+      "A_arithmetic": 36,
+      "B_strong": 0,
+      "C_ambiguous": 0,
+      "total": 36
+     },
+     {
+      "group": "turnout forms",
+      "label": "one-keystroke error in a turnout field (`turnout_digit`)",
+      "A_arithmetic": 5,
+      "B_strong": 17,
+      "C_ambiguous": 32,
+      "total": 54
+     },
+     {
+      "group": "turnout forms",
+      "label": "field copied from another form (`copy_from_*`)",
+      "A_arithmetic": 6,
+      "B_strong": 4,
+      "C_ambiguous": 3,
+      "total": 13
+     },
+     {
+      "group": "turnout forms",
+      "label": "unexplained turnout relation (`other`, `novel_turnout`)",
+      "A_arithmetic": 0,
+      "B_strong": 0,
+      "C_ambiguous": 8,
+      "total": 8
+     },
+     {
+      "group": "turnout forms",
+      "label": "participation-rate anomaly, no edit proposed (`joint`)",
+      "A_arithmetic": 0,
+      "B_strong": 0,
+      "C_ambiguous": 56,
+      "total": 56
+     },
+     {
+      "group": "values moved inside a vote record",
+      "label": "`row_shift`",
+      "A_arithmetic": 0,
+      "B_strong": 3,
+      "C_ambiguous": 17,
+      "total": 20
+     },
+     {
+      "group": "values moved inside a vote record",
+      "label": "`swap`",
+      "A_arithmetic": 0,
+      "B_strong": 6,
+      "C_ambiguous": 43,
+      "total": 49
+     },
+     {
+      "group": "values moved inside a vote record",
+      "label": "`transfer`",
+      "A_arithmetic": 0,
+      "B_strong": 0,
+      "C_ambiguous": 17,
+      "total": 17
+     },
+     {
+      "group": "values moved inside a vote record",
+      "label": "`vector_swap` (two precincts exchanged)",
+      "A_arithmetic": 0,
+      "B_strong": 0,
+      "C_ambiguous": 11,
+      "total": 11
+     },
+     {
+      "group": "digit errors",
+      "label": "`digit_sub`, `transposition`",
+      "A_arithmetic": 0,
+      "B_strong": 1,
+      "C_ambiguous": 153,
+      "total": 154
+     },
+     {
+      "group": "digit errors",
+      "label": "`digit_ins`",
+      "A_arithmetic": 0,
+      "B_strong": 1,
+      "C_ambiguous": 43,
+      "total": 44
+     },
+     {
+      "group": "digit errors",
+      "label": "`digit_del`",
+      "A_arithmetic": 0,
+      "B_strong": 1,
+      "C_ambiguous": 22,
+      "total": 23
+     },
+     {
+      "group": "missing, duplicated or copied blocks",
+      "label": "`missing_block`",
+      "A_arithmetic": 0,
+      "B_strong": 0,
+      "C_ambiguous": 29,
+      "total": 29
+     },
+     {
+      "group": "missing, duplicated or copied blocks",
+      "label": "`duplicate_block`, `duplicate_vector`",
+      "A_arithmetic": 0,
+      "B_strong": 0,
+      "C_ambiguous": 9,
+      "total": 9
+     },
+     {
+      "group": "missing, duplicated or copied blocks",
+      "label": "part of the record missing (`partial_omission`, `party_block_missing`, `block_scale`)",
+      "A_arithmetic": 0,
+      "B_strong": 1,
+      "C_ambiguous": 11,
+      "total": 12
+     },
+     {
+      "group": "ballot-mark arithmetic and zeros",
+      "label": "`full_marks`, `one_mark_per_ballot`, `top_of_ballot_voting`",
+      "A_arithmetic": 0,
+      "B_strong": 2,
+      "C_ambiguous": 7,
+      "total": 9
+     },
+     {
+      "group": "ballot-mark arithmetic and zeros",
+      "label": "more zeros than the model allows (`globaltests` `zero_excess`)",
+      "A_arithmetic": 0,
+      "B_strong": 0,
+      "C_ambiguous": 3,
+      "total": 3
+     },
+     {
+      "group": "cross-election profile",
+      "label": "cell anomaly, no edit proposed (`crossyear`)",
+      "A_arithmetic": 0,
+      "B_strong": 0,
+      "C_ambiguous": 31,
+      "total": 31
+     }
+    ],
+    "unmapped_mechanisms": [],
+    "findings_by_detector_tier": {
+     "checks": {
+      "A_arithmetic": 36,
+      "B_strong": 0,
+      "C_ambiguous": 0
+     },
+     "crossballot": {
+      "A_arithmetic": 0,
+      "B_strong": 4,
+      "C_ambiguous": 291
+     },
+     "crossyear": {
+      "A_arithmetic": 0,
+      "B_strong": 0,
+      "C_ambiguous": 31
+     },
+     "errorsearch": {
+      "A_arithmetic": 0,
+      "B_strong": 5,
+      "C_ambiguous": 33
+     },
+     "globaltests": {
+      "A_arithmetic": 0,
+      "B_strong": 0,
+      "C_ambiguous": 3
+     },
+     "joint": {
+      "A_arithmetic": 0,
+      "B_strong": 8,
+      "C_ambiguous": 74
+     },
+     "novel_dup": {
+      "A_arithmetic": 0,
+      "B_strong": 0,
+      "C_ambiguous": 20
+     },
+     "novel_turnout": {
+      "A_arithmetic": 11,
+      "B_strong": 14,
+      "C_ambiguous": 22
+     },
+     "novel_util": {
+      "A_arithmetic": 0,
+      "B_strong": 2,
+      "C_ambiguous": 10
+     },
+     "record_shortfall": {
+      "A_arithmetic": 0,
+      "B_strong": 1,
+      "C_ambiguous": 8
+     },
+     "slates": {
+      "A_arithmetic": 0,
+      "B_strong": 2,
+      "C_ambiguous": 3
+     }
+    },
+    "infeasible_corrections_by_detector": {
+     "crossballot": 1,
+     "errorsearch": 9,
+     "joint": 1,
+     "novel_dup": 4
+    },
+    "infeasible_corrections": 15,
+    "demoted_B_to_C": 2,
+    "crossballot_findings": 295,
+    "crossballot_correction_withheld": 259,
+    "cases": 507,
+    "cases_by_tier": {
+     "A_arithmetic": 33,
+     "B_strong": 29,
+     "C_ambiguous": 445
+    },
+    "cases_by_kind": {
+     "turnout_form": 126,
+     "council": 122,
+     "mayor": 67,
+     "president": 20,
+     "regional_council": 172
+    },
+    "cases_by_n_families": {
+     "1": 464,
+     "2": 42,
+     "3": 1
+    },
+    "cases_by_outcome_class": {
+     "0_not_vote_level": 126,
+     "1_changes_elected": 2,
+     "2_could_change": 20,
+     "3_no_change": 359
+    },
+    "cases_reviewed": 92,
+    "verdict_by_tier": {
+     "confirmed_error": {
+      "A_arithmetic": 33,
+      "B_strong": 12,
+      "C_ambiguous": 5
+     },
+     "probable_error": {
+      "A_arithmetic": 0,
+      "B_strong": 12,
+      "C_ambiguous": 4
+     },
+     "inconclusive": {
+      "A_arithmetic": 0,
+      "B_strong": 2,
+      "C_ambiguous": 1
+     },
+     "probable_genuine": {
+      "A_arithmetic": 0,
+      "B_strong": 2,
+      "C_ambiguous": 7
+     },
+     "rejected": {
+      "A_arithmetic": 0,
+      "B_strong": 1,
+      "C_ambiguous": 13
+     }
+    },
+    "held_by_tier": {
+     "A_arithmetic": {
+      "held": 33,
+      "not_held": 0,
+      "inconclusive": 0
+     },
+     "B_strong": {
+      "held": 24,
+      "not_held": 3,
+      "inconclusive": 2
+     },
+     "C_ambiguous": {
+      "held": 9,
+      "not_held": 20,
+      "inconclusive": 1
+     }
+    },
+    "unreviewed": 415,
+    "unreviewed_by_tier_class": [
+     {
+      "tier": "C_ambiguous",
+      "class": "0_not_vote_level",
+      "n": 78
+     },
+     {
+      "tier": "C_ambiguous",
+      "class": "3_no_change",
+      "n": 337
+     }
+    ],
+    "unreviewed_AB_or_class12": [],
+    "reviewed_cases_per_detector": {
+     "checks": {
+      "held": 33,
+      "not_held": 0,
+      "inconclusive": 0
+     },
+     "crossballot": {
+      "held": 10,
+      "not_held": 14,
+      "inconclusive": 0
+     },
+     "crossyear": {
+      "held": 0,
+      "not_held": 0,
+      "inconclusive": 0
+     },
+     "errorsearch": {
+      "held": 11,
+      "not_held": 3,
+      "inconclusive": 0
+     },
+     "globaltests": {
+      "held": 0,
+      "not_held": 0,
+      "inconclusive": 0
+     },
+     "joint": {
+      "held": 15,
+      "not_held": 1,
+      "inconclusive": 1
+     },
+     "novel_dup": {
+      "held": 0,
+      "not_held": 0,
+      "inconclusive": 0
+     },
+     "novel_turnout": {
+      "held": 22,
+      "not_held": 2,
+      "inconclusive": 2
+     },
+     "novel_util": {
+      "held": 5,
+      "not_held": 3,
+      "inconclusive": 1
+     },
+     "record_shortfall": {
+      "held": 3,
+      "not_held": 1,
+      "inconclusive": 0
+     },
+     "slates": {
+      "held": 1,
+      "not_held": 1,
+      "inconclusive": 0
+     },
+     "sorted_record": {
+      "held": 0,
+      "not_held": 0,
+      "inconclusive": 0
+     },
+     "withdrawn": {
+      "held": 0,
+      "not_held": 0,
+      "inconclusive": 0
+     }
+    },
+    "class12_cases": [
+     {
+      "case_id": "2026-OSO-C-528820-1|528820-1",
+      "municipality": "Kvakovce",
+      "tier": "C_ambiguous",
+      "class": "1_changes_elected",
+      "verdict": "rejected"
+     },
+     {
+      "case_id": "2026-OSO-M-528820|528820-1",
+      "municipality": "Kvakovce",
+      "tier": "C_ambiguous",
+      "class": "1_changes_elected",
+      "verdict": "rejected"
+     },
+     {
+      "case_id": "2026-OSK-C-104|529311-12",
+      "municipality": "Bratislava - Podunajské Biskupice",
+      "tier": "C_ambiguous",
+      "class": "2_could_change",
+      "verdict": "probable_error"
+     },
+     {
+      "case_id": "2026-OSK-C-511|517402-3",
+      "municipality": "Žilina",
+      "tier": "B_strong",
+      "class": "2_could_change",
+      "verdict": "probable_error"
+     },
+     {
+      "case_id": "2026-OSK-C-703|524000-1",
+      "municipality": "Veľká Lomnica",
+      "tier": "B_strong",
+      "class": "2_could_change",
+      "verdict": "probable_error"
+     },
+     {
+      "case_id": "2026-OSK-C-807|528633-2",
+      "municipality": "Oborín",
+      "tier": "C_ambiguous",
+      "class": "2_could_change",
+      "verdict": "probable_genuine"
+     },
+     {
+      "case_id": "2026-OSK-C-809|523232-1",
+      "municipality": "Veľké Revištia",
+      "tier": "C_ambiguous",
+      "class": "2_could_change",
+      "verdict": "rejected"
+     },
+     {
+      "case_id": "2026-OSK-C-811|528722-4",
+      "municipality": "Sečovce",
+      "tier": "C_ambiguous",
+      "class": "2_could_change",
+      "verdict": "probable_genuine"
+     },
+     {
+      "case_id": "2026-OSO-C-506826-1|506826-1",
+      "municipality": "Borová",
+      "tier": "C_ambiguous",
+      "class": "2_could_change",
+      "verdict": "probable_genuine"
+     },
+     {
+      "case_id": "2026-OSO-C-514721-1|514721-1",
+      "municipality": "Gemer",
+      "tier": "C_ambiguous",
+      "class": "2_could_change",
+      "verdict": "inconclusive"
+     },
+     {
+      "case_id": "2026-OSO-C-517402-6|517402-72",
+      "municipality": "Žilina",
+      "tier": "C_ambiguous",
+      "class": "2_could_change",
+      "verdict": "rejected"
+     },
+     {
+      "case_id": "2026-OSO-C-523780-1|523780-2",
+      "municipality": "Podhorany",
+      "tier": "C_ambiguous",
+      "class": "2_could_change",
+      "verdict": "probable_genuine"
+     },
+     {
+      "case_id": "2026-OSO-C-525171-1|525171-2",
+      "municipality": "Svinia",
+      "tier": "C_ambiguous",
+      "class": "2_could_change",
+      "verdict": "rejected"
+     },
+     {
+      "case_id": "2026-OSO-C-528510-1|528510-1",
+      "municipality": "Leles",
+      "tier": "C_ambiguous",
+      "class": "2_could_change",
+      "verdict": "rejected"
+     },
+     {
+      "case_id": "2026-OSO-C-529061-1|529061-1",
+      "municipality": "Rohožník",
+      "tier": "C_ambiguous",
+      "class": "2_could_change",
+      "verdict": "probable_genuine"
+     },
+     {
+      "case_id": "2026-OSO-C-529176-1|529176-1",
+      "municipality": "Soľ",
+      "tier": "C_ambiguous",
+      "class": "2_could_change",
+      "verdict": "rejected"
+     },
+     {
+      "case_id": "2026-OSO-C-529176-1|529176-2",
+      "municipality": "Soľ",
+      "tier": "C_ambiguous",
+      "class": "2_could_change",
+      "verdict": "rejected"
+     },
+     {
+      "case_id": "2026-OSO-C-529354-2|529354-13",
+      "municipality": "Bratislava - Rača",
+      "tier": "C_ambiguous",
+      "class": "2_could_change",
+      "verdict": "confirmed_error"
+     },
+     {
+      "case_id": "2026-OSO-C-543501-1|543501-1",
+      "municipality": "Richnava",
+      "tier": "C_ambiguous",
+      "class": "2_could_change",
+      "verdict": "rejected"
+     },
+     {
+      "case_id": "2026-OSO-C-543501-1|543501-3",
+      "municipality": "Richnava",
+      "tier": "C_ambiguous",
+      "class": "2_could_change",
+      "verdict": "probable_genuine"
+     },
+     {
+      "case_id": "2026-OSO-M-507873|507873-1",
+      "municipality": "Doľany",
+      "tier": "C_ambiguous",
+      "class": "2_could_change",
+      "verdict": "rejected"
+     },
+     {
+      "case_id": "2026-OSO-M-515744|515744-1",
+      "municipality": "Veľký Blh",
+      "tier": "C_ambiguous",
+      "class": "2_could_change",
+      "verdict": "rejected"
+     }
+    ],
+    "held_up": 66,
+    "held_up_vote_records": 22,
+    "held_up_vote_records_by_kind": {
+     "council": 6,
+     "mayor": 4,
+     "president": 2,
+     "regional_council": 10
+    },
+    "held_up_turnout_fields": 44,
+    "ba_mayor_records_with_error_held_up": 3,
+    "rates_per_1000": {
+     "vote_records": 25259,
+     "oso_vote_records": 13201,
+     "osk_vote_records": 12058,
+     "turnout_records": 12631,
+     "findings_all": 22.88,
+     "findings_vote_level": 420,
+     "findings_vote_level_per_1000": 16.63,
+     "findings_oso": 205,
+     "findings_oso_per_1000": 15.53,
+     "findings_osk": 215,
+     "findings_osk_per_1000": 17.83,
+     "findings_turnout": 158,
+     "findings_turnout_per_1000": 12.51,
+     "tier_per_1000": {
+      "A_arithmetic": 1.86,
+      "B_strong": 1.43,
+      "C_ambiguous": 19.6
+     },
+     "held_vote_per_1000": 0.87,
+     "held_turnout_per_1000": 3.48
+    }
+   },
+   "reviews": {
+    "files": 155,
+    "verdicts_all_files": {
+     "confirmed_error": 50,
+     "probable_error": 17,
+     "inconclusive": 7,
+     "probable_genuine": 61,
+     "rejected": 20
+    },
+    "attached_to_register_case": 92,
+    "verdicts_attached": {
+     "confirmed_error": 50,
+     "probable_error": 16,
+     "inconclusive": 3,
+     "probable_genuine": 9,
+     "rejected": 14
+    },
+    "not_register_cases": 63,
+    "verdicts_not_register_cases": {
+     "confirmed_error": 0,
+     "probable_error": 1,
+     "inconclusive": 4,
+     "probable_genuine": 52,
+     "rejected": 6
+    },
+    "changes_elected_true": []
+   },
+   "recount_watch": {
+    "contested_contests": 5009,
+    "listed": 1047,
+    "by_tier_kind": {
+     "tie": {
+      "council": 106,
+      "mayor": 6
+     },
+     "upper_band": {
+      "council": 355,
+      "mayor": 31,
+      "regional_council": 16
+     },
+     "within_band": {
+      "council": 491,
+      "mayor": 41,
+      "regional_council": 1
+     }
+    },
+    "us_trigger_only": 40,
+    "listed_invalid_route": 954,
+    "reversal_not_changing_seated": 87,
+    "first_out_standing": 344,
+    "first_out_independent_without_standing": 272,
+    "margin_0_or_1": 352,
+    "record_full_pair": 160,
+    "record_some_precinct": 181,
+    "record_full_pair_margin_0_or_1": 58,
+    "docs_in_municipality": 559,
+    "one_vote_mayors_record_full_pair": [
+     "Veľké Kapušany",
+     "Stretava",
+     "Bánovce nad Ondavou",
+     "Veľká Tŕňa",
+     "Ležiachov",
+     "Malý Krtíš"
+    ],
+    "record_cells_not_match": 26
+   },
+   "recount_watch_rate_sensitivity": {
+    "0.0061": 898,
+    "0.0105": 1179
+   }
+  }
+ },
+ "prelim_vs_definitive_2026": {
+  "snapshot": "20261025T133858Z",
+  "values_compared": 187359,
+  "outcome_checks": 8763,
+  "changed": 0,
+  "snapshots_compared": 7,
+  "changed_by_snapshot": {
+   "20261025T073500Z": 5,
+   "20261025T075330Z": 5,
+   "20261025T090929Z": 5,
+   "20261025T111227Z": 0,
+   "20261025T131409Z": 0,
+   "20261025T132205Z": 0,
+   "20261025T133858Z": 0
+  }
+ },
+ "protocols_2026": {
+  "documents_compared": 1228,
+  "precincts": 495,
+  "share_of_all_precincts": 0.0821,
+  "osk_precincts_total": 6029,
+  "municipalities": 266,
+  "records_by_ballot": {
+   "osk": 399,
+   "oso": 325
+  },
+  "by_text_quality": {
+   "ocr": {
+    "values": 14031,
+    "match": 13553,
+    "by_class": {
+     "match": 13553,
+     "ocr_error": 478
+    },
+    "match_rate": 0.9659,
+    "values_identity_ok": 13553,
+    "match_rate_identity_ok": 1.0,
+    "records": 451,
+    "records_all_match": 243
+   },
+   "ocr-like": {
+    "values": 86,
+    "match": 71,
+    "by_class": {
+     "match": 71,
+     "ocr_error": 15
+    },
+    "match_rate": 0.8256,
+    "values_identity_ok": 71,
+    "match_rate_identity_ok": 1.0,
+    "records": 11,
+    "records_all_match": 4
+   },
+   "text": {
+    "values": 2565,
+    "match": 2562,
+    "by_class": {
+     "draft": 1,
+     "match": 2562,
+     "ocr_error": 2
+    },
+    "match_rate": 0.9988,
+    "values_identity_ok": 2563,
+    "match_rate_identity_ok": 0.9996,
+    "records": 67,
+    "records_all_match": 65
+   },
+   "text-layer": {
+    "values": 3321,
+    "match": 2606,
+    "by_class": {
+     "match": 2606,
+     "ocr_error": 715
+    },
+    "match_rate": 0.7847,
+    "values_identity_ok": 2606,
+    "match_rate_identity_ok": 1.0,
+    "records": 195,
+    "records_all_match": 74
+   }
+  },
+  "raw": {
+   "documents_compared": 1228,
+   "documents_unlocated": 8,
+   "municipal_records": {
+    "units": 447,
+    "all": {
+     "values": 7849,
+     "match": 7675,
+     "by_class": {
+      "document_error": 3,
+      "match": 7675,
+      "ocr_error": 160,
+      "wrong_document": 11
+     },
+     "match_rate": 0.9778,
+     "values_identity_ok": 7689,
+     "match_rate_identity_ok": 0.9982,
+     "records": 449,
+     "records_all_match": 396
+    }
+   },
+   "precinct_tables": {
+    "precincts": 61,
+    "municipalities": 13,
+    "all": {
+     "values": 1613,
+     "match": 1607,
+     "by_class": {
+      "document_error": 1,
+      "genuine": 5,
+      "match": 1607
+     },
+     "match_rate": 0.9963,
+     "values_identity_ok": 1613,
+     "match_rate_identity_ok": 0.9963,
+     "records": 16,
+     "records_all_match": 12
+    }
+   },
+   "municipalities_any": 485,
+   "contests_touched": 971,
+   "contests_touched_by_kind": {
+    "council": 511,
+    "mayor": 389,
+    "president": 8,
+    "regional_council": 63
+   },
+   "contests_fully_covered": [
+    "2026-OSO-C-500046-1",
+    "2026-OSO-C-500437-1",
+    "2026-OSO-C-500739-1",
+    "2026-OSO-C-500780-1",
+    "2026-OSO-C-501701-1",
+    "2026-OSO-C-502359-1",
+    "2026-OSO-C-503223-1",
+    "2026-OSO-C-503967-1",
+    "2026-OSO-C-504033-1",
+    "2026-OSO-C-504378-2",
+    "2026-OSO-C-505544-1",
+    "2026-OSO-C-505897-1",
+    "2026-OSO-C-506087-1",
+    "2026-OSO-C-506419-1",
+    "2026-OSO-C-506583-1",
+    "2026-OSO-C-506877-1",
+    "2026-OSO-C-507229-1",
+    "2026-OSO-C-507318-1",
+    "2026-OSO-C-507466-1",
+    "2026-OSO-C-507491-1",
+    "2026-OSO-C-507661-1",
+    "2026-OSO-C-507725-1",
+    "2026-OSO-C-507814-1",
+    "2026-OSO-C-507814-3",
+    "2026-OSO-C-508063-1",
+    "2026-OSO-C-508063-3",
+    "2026-OSO-C-508063-5",
+    "2026-OSO-C-508071-1",
+    "2026-OSO-C-508616-1",
+    "2026-OSO-C-509159-1",
+    "2026-OSO-C-509248-1",
+    "2026-OSO-C-509361-1",
+    "2026-OSO-C-509540-1",
+    "2026-OSO-C-509540-2",
+    "2026-OSO-C-509540-3",
+    "2026-OSO-C-509540-4",
+    "2026-OSO-C-509744-1",
+    "2026-OSO-C-510149-1",
+    "2026-OSO-C-510637-1",
+    "2026-OSO-C-511838-1",
+    "2026-OSO-C-511854-1",
+    "2026-OSO-C-513881-2",
+    "2026-OSO-C-513881-3",
+    "2026-OSO-C-513881-5",
+    "2026-OSO-C-513946-1",
+    "2026-OSO-C-515264-1",
+    "2026-OSO-C-517658-1",
+    "2026-OSO-C-518123-1",
+    "2026-OSO-C-518379-1",
+    "2026-OSO-C-518379-2",
+    "2026-OSO-C-518972-1",
+    "2026-OSO-C-519162-1",
+    "2026-OSO-C-519243-1",
+    "2026-OSO-C-519821-1",
+    "2026-OSO-C-519839-1",
+    "2026-OSO-C-520055-1",
+    "2026-OSO-C-521175-1",
+    "2026-OSO-C-521892-1",
+    "2026-OSO-C-521965-1",
+    "2026-OSO-C-521965-2",
+    "2026-OSO-C-522414-1",
+    "2026-OSO-C-522520-1",
+    "2026-OSO-C-523011-1",
+    "2026-OSO-C-523101-1",
+    "2026-OSO-C-523208-1",
+    "2026-OSO-C-523402-1",
+    "2026-OSO-C-525138-1",
+    "2026-OSO-C-525162-1",
+    "2026-OSO-C-525669-1",
+    "2026-OSO-C-525839-1",
+    "2026-OSO-C-526215-1",
+    "2026-OSO-C-526436-1",
+    "2026-OSO-C-526649-1",
+    "2026-OSO-C-526762-1",
+    "2026-OSO-C-526797-1",
+    "2026-OSO-C-526941-1",
+    "2026-OSO-C-526975-1",
+    "2026-OSO-C-528633-1",
+    "2026-OSO-C-528633-2",
+    "2026-OSO-C-528862-1",
+    "2026-OSO-C-529001-1",
+    "2026-OSO-C-529133-1",
+    "2026-OSO-C-529176-1",
+    "2026-OSO-C-543080-1",
+    "2026-OSO-C-543144-1",
+    "2026-OSO-C-543179-1",
+    "2026-OSO-C-543250-1",
+    "2026-OSO-C-543276-1",
+    "2026-OSO-C-543527-1",
+    "2026-OSO-C-543811-1",
+    "2026-OSO-C-543918-1",
+    "2026-OSO-C-544230-1",
+    "2026-OSO-C-555673-1",
+    "2026-OSO-C-556521-1",
+    "2026-OSO-C-557404-1",
+    "2026-OSO-C-557447-1",
+    "2026-OSO-C-557765-1",
+    "2026-OSO-C-558320-1",
+    "2026-OSO-C-598224-2",
+    "2026-OSO-M-500739",
+    "2026-OSO-M-501701",
+    "2026-OSO-M-502359",
+    "2026-OSO-M-503223",
+    "2026-OSO-M-503967",
+    "2026-OSO-M-504033",
+    "2026-OSO-M-504050",
+    "2026-OSO-M-504378",
+    "2026-OSO-M-505544",
+    "2026-OSO-M-506087",
+    "2026-OSO-M-506095",
+    "2026-OSO-M-506419",
+    "2026-OSO-M-506508",
+    "2026-OSO-M-506583",
+    "2026-OSO-M-506877",
+    "2026-OSO-M-507229",
+    "2026-OSO-M-507318",
+    "2026-OSO-M-507482",
+    "2026-OSO-M-507491",
+    "2026-OSO-M-507661",
+    "2026-OSO-M-507725",
+    "2026-OSO-M-507814",
+    "2026-OSO-M-508071",
+    "2026-OSO-M-508616",
+    "2026-OSO-M-509159",
+    "2026-OSO-M-509205",
+    "2026-OSO-M-509248",
+    "2026-OSO-M-509329",
+    "2026-OSO-M-509361",
+    "2026-OSO-M-509540",
+    "2026-OSO-M-509744",
+    "2026-OSO-M-510149",
+    "2026-OSO-M-510637",
+    "2026-OSO-M-511838",
+    "2026-OSO-M-511854",
+    "2026-OSO-M-513741",
+    "2026-OSO-M-513881",
+    "2026-OSO-M-513946",
+    "2026-OSO-M-514365",
+    "2026-OSO-M-517658",
+    "2026-OSO-M-518123",
+    "2026-OSO-M-518298",
+    "2026-OSO-M-518379",
+    "2026-OSO-M-518972",
+    "2026-OSO-M-519162",
+    "2026-OSO-M-519243",
+    "2026-OSO-M-519821",
+    "2026-OSO-M-519839",
+    "2026-OSO-M-520055",
+    "2026-OSO-M-520802",
+    "2026-OSO-M-521175",
+    "2026-OSO-M-521892",
+    "2026-OSO-M-521965",
+    "2026-OSO-M-522295",
+    "2026-OSO-M-522392",
+    "2026-OSO-M-522520",
+    "2026-OSO-M-523011",
+    "2026-OSO-M-523101",
+    "2026-OSO-M-523119",
+    "2026-OSO-M-523208",
+    "2026-OSO-M-525138",
+    "2026-OSO-M-525162",
+    "2026-OSO-M-525669",
+    "2026-OSO-M-525839",
+    "2026-OSO-M-526215",
+    "2026-OSO-M-526436",
+    "2026-OSO-M-526649",
+    "2026-OSO-M-526762",
+    "2026-OSO-M-526797",
+    "2026-OSO-M-526941",
+    "2026-OSO-M-526975",
+    "2026-OSO-M-528633",
+    "2026-OSO-M-528862",
+    "2026-OSO-M-529001",
+    "2026-OSO-M-529133",
+    "2026-OSO-M-529176",
+    "2026-OSO-M-529362",
+    "2026-OSO-M-543080",
+    "2026-OSO-M-543144",
+    "2026-OSO-M-543179",
+    "2026-OSO-M-543250",
+    "2026-OSO-M-543276",
+    "2026-OSO-M-543527",
+    "2026-OSO-M-543811",
+    "2026-OSO-M-543918",
+    "2026-OSO-M-544230",
+    "2026-OSO-M-555673",
+    "2026-OSO-M-556521",
+    "2026-OSO-M-556688",
+    "2026-OSO-M-557404",
+    "2026-OSO-M-557765",
+    "2026-OSO-M-558320",
+    "2026-OSO-M-580546"
+   ],
+   "all_documents_by_class": {
+    "document_error": 4,
+    "draft": 1,
+    "genuine": 5,
+    "match": 28658,
+    "ocr_error": 1401,
+    "unlocated": 8,
+    "wrong_document": 11
+   },
+   "impact": [
+    {
+     "sha16": "8d78d371a64756a3",
+     "contest_id": "2026-OSO-C-543578-1",
+     "precinct_id": "543578-5",
+     "corrections": [
+      [
+       "543578-5",
+       28,
+       4
+      ]
+     ],
+     "classes": [
+      "genuine"
+     ],
+     "changed": false,
+     "seated_changed": false,
+     "entered": [],
+     "exited": [],
+     "tie_after": false
+    },
+    {
+     "sha16": "5750546766ca028f",
+     "contest_id": "2026-OSK-P-3",
+     "precinct_id": "506524-5",
+     "corrections": [
+      [
+       "506524-5",
+       3,
+       5
+      ],
+      [
+       "506524-5",
+       4,
+       163
+      ]
+     ],
+     "classes": [
+      "genuine"
+     ],
+     "changed": false,
+     "seated_changed": false,
+     "entered": [],
+     "exited": [],
+     "tie_after": false
+    }
+   ],
+   "register_cases": [
+    {
+     "case_id": "2026-OSK-C-807|528633-2",
+     "rank": 32,
+     "municipality": "Oborín",
+     "documents": [
+      "c35a0472ff02aa1e"
+     ],
+     "values": 5,
+     "match": 5,
+     "classes": {
+      "match": 5
+     },
+     "contest_votes_compared": 0
+    },
+    {
+     "case_id": "2026-OSO-C-529176-1|529176-1",
+     "rank": 34,
+     "municipality": "Soľ",
+     "documents": [
+      "dad1c6a38c7019bb"
+     ],
+     "values": 31,
+     "match": 31,
+     "classes": {
+      "match": 31
+     },
+     "contest_votes_compared": 26
+    },
+    {
+     "case_id": "2026-OSO-C-529176-1|529176-2",
+     "rank": 36,
+     "municipality": "Soľ",
+     "documents": [
+      "e5a854b37aa35e45"
+     ],
+     "values": 31,
+     "match": 31,
+     "classes": {
+      "match": 31
+     },
+     "contest_votes_compared": 26
+    },
+    {
+     "case_id": "precinct|598224-23",
+     "rank": 59,
+     "municipality": "Košice - Západ",
+     "documents": [
+      "97e45c715d0572a3"
+     ],
+     "values": 25,
+     "match": 12,
+     "classes": {
+      "match": 12,
+      "ocr_error": 13
+     },
+     "contest_votes_compared": 21
+    },
+    {
+     "case_id": "precinct|526436-1",
+     "rank": 68,
+     "municipality": "Bystrany",
+     "documents": [
+      "5d3f45da53ea5b75"
+     ],
+     "values": 64,
+     "match": 63,
+     "classes": {
+      "match": 63,
+      "ocr_error": 1
+     },
+     "contest_votes_compared": 59
+    },
+    {
+     "case_id": "2026-OSK-C-713|529176-2",
+     "rank": 88,
+     "municipality": "Soľ",
+     "documents": [
+      "82265bae368bae41"
+     ],
+     "values": 50,
+     "match": 50,
+     "classes": {
+      "match": 50
+     },
+     "contest_votes_compared": 45
+    },
+    {
+     "case_id": "precinct|510513-1",
+     "rank": 105,
+     "municipality": "Jalovec",
+     "documents": [
+      "f2516d94e8d780b6"
+     ],
+     "values": 36,
+     "match": 32,
+     "classes": {
+      "match": 32,
+      "ocr_error": 4
+     },
+     "contest_votes_compared": 31
+    },
+    {
+     "case_id": "2026-OSK-C-713|529176-1",
+     "rank": 107,
+     "municipality": "Soľ",
+     "documents": [
+      "142e8bf9781aed03"
+     ],
+     "values": 50,
+     "match": 50,
+     "classes": {
+      "match": 50
+     },
+     "contest_votes_compared": 45
+    },
+    {
+     "case_id": "2026-OSO-M-598224|598224-2",
+     "rank": 121,
+     "municipality": "Košice - Západ",
+     "documents": [
+      "442a58e27d3fb5cf"
+     ],
+     "values": 10,
+     "match": 9,
+     "classes": {
+      "match": 9,
+      "ocr_error": 1
+     },
+     "contest_votes_compared": 6
+    },
+    {
+     "case_id": "2026-OSO-M-598224|598224-23",
+     "rank": 122,
+     "municipality": "Košice - Západ",
+     "documents": [
+      "97e45c715d0572a3"
+     ],
+     "values": 11,
+     "match": 5,
+     "classes": {
+      "match": 5,
+      "ocr_error": 6
+     },
+     "contest_votes_compared": 7
+    },
+    {
+     "case_id": "2026-OSO-M-598224|598224-20",
+     "rank": 124,
+     "municipality": "Košice - Západ",
+     "documents": [
+      "7cc250cf9cc5871f"
+     ],
+     "values": 9,
+     "match": 4,
+     "classes": {
+      "match": 4,
+      "ocr_error": 5
+     },
+     "contest_votes_compared": 5
+    },
+    {
+     "case_id": "2026-OSO-M-598224|598224-29",
+     "rank": 125,
+     "municipality": "Košice - Západ",
+     "documents": [
+      "6d9af547ae102099"
+     ],
+     "values": 8,
+     "match": 1,
+     "classes": {
+      "match": 1,
+      "ocr_error": 7
+     },
+     "contest_votes_compared": 3
+    },
+    {
+     "case_id": "2026-OSO-M-598224|598224-5",
+     "rank": 126,
+     "municipality": "Košice - Západ",
+     "documents": [
+      "eaece0ea1256be02"
+     ],
+     "values": 8,
+     "match": 4,
+     "classes": {
+      "match": 4,
+      "ocr_error": 4
+     },
+     "contest_votes_compared": 3
+    },
+    {
+     "case_id": "2026-OSO-M-598224|598224-7",
+     "rank": 127,
+     "municipality": "Košice - Západ",
+     "documents": [
+      "f707b39c157051bd"
+     ],
+     "values": 7,
+     "match": 6,
+     "classes": {
+      "match": 6,
+      "ocr_error": 1
+     },
+     "contest_votes_compared": 5
+    },
+    {
+     "case_id": "2026-OSO-M-598224|598224-18",
+     "rank": 128,
+     "municipality": "Košice - Západ",
+     "documents": [
+      "d04b07795e5fa764"
+     ],
+     "values": 12,
+     "match": 6,
+     "classes": {
+      "match": 6,
+      "ocr_error": 6
+     },
+     "contest_votes_compared": 8
+    },
+    {
+     "case_id": "2026-OSO-M-598224|598224-6",
+     "rank": 132,
+     "municipality": "Košice - Západ",
+     "documents": [
+      "38044d71a2d755e7"
+     ],
+     "values": 11,
+     "match": 5,
+     "classes": {
+      "match": 5,
+      "ocr_error": 6
+     },
+     "contest_votes_compared": 6
+    },
+    {
+     "case_id": "2026-OSO-M-598224|598224-28",
+     "rank": 133,
+     "municipality": "Košice - Západ",
+     "documents": [
+      "a7aa825b6bf577e7"
+     ],
+     "values": 4,
+     "match": 2,
+     "classes": {
+      "match": 2,
+      "ocr_error": 2
+     },
+     "contest_votes_compared": 2
+    },
+    {
+     "case_id": "2026-OSO-M-598224|598224-19",
+     "rank": 134,
+     "municipality": "Košice - Západ",
+     "documents": [
+      "2c8999fb2b8d4876"
+     ],
+     "values": 9,
+     "match": 6,
+     "classes": {
+      "match": 6,
+      "ocr_error": 3
+     },
+     "contest_votes_compared": 6
+    },
+    {
+     "case_id": "2026-OSO-M-598224|598224-14",
+     "rank": 136,
+     "municipality": "Košice - Západ",
+     "documents": [
+      "f4466fcd1ed3ddcf"
+     ],
+     "values": 11,
+     "match": 9,
+     "classes": {
+      "match": 9,
+      "ocr_error": 2
+     },
+     "contest_votes_compared": 6
+    },
+    {
+     "case_id": "2026-OSO-M-598224|598224-13",
+     "rank": 138,
+     "municipality": "Košice - Západ",
+     "documents": [
+      "7f9de1d0cb1293be"
+     ],
+     "values": 6,
+     "match": 3,
+     "classes": {
+      "match": 3,
+      "ocr_error": 3
+     },
+     "contest_votes_compared": 4
+    },
+    {
+     "case_id": "2026-OSO-M-598224|598224-21",
+     "rank": 139,
+     "municipality": "Košice - Západ",
+     "documents": [
+      "d7e0742c1f061168"
+     ],
+     "values": 10,
+     "match": 4,
+     "classes": {
+      "match": 4,
+      "ocr_error": 6
+     },
+     "contest_votes_compared": 5
+    },
+    {
+     "case_id": "2026-OSO-M-598224|598224-12",
+     "rank": 140,
+     "municipality": "Košice - Západ",
+     "documents": [
+      "5c0b73f0b3eb8007"
+     ],
+     "values": 10,
+     "match": 5,
+     "classes": {
+      "match": 5,
+      "ocr_error": 5
+     },
+     "contest_votes_compared": 6
+    },
+    {
+     "case_id": "2026-OSO-M-598224|598224-22",
+     "rank": 142,
+     "municipality": "Košice - Západ",
+     "documents": [
+      "d5eb868abcdb3cc9"
+     ],
+     "values": 10,
+     "match": 5,
+     "classes": {
+      "match": 5,
+      "ocr_error": 5
+     },
+     "contest_votes_compared": 6
+    },
+    {
+     "case_id": "2026-OSO-M-598224|598224-26",
+     "rank": 143,
+     "municipality": "Košice - Západ",
+     "documents": [
+      "4b34e2ae2d31c5bf"
+     ],
+     "values": 10,
+     "match": 5,
+     "classes": {
+      "match": 5,
+      "ocr_error": 5
+     },
+     "contest_votes_compared": 6
+    },
+    {
+     "case_id": "2026-OSO-M-598224|598224-27",
+     "rank": 144,
+     "municipality": "Košice - Západ",
+     "documents": [
+      "46545d2f342ab8f3"
+     ],
+     "values": 4,
+     "match": 0,
+     "classes": {
+      "ocr_error": 4
+     },
+     "contest_votes_compared": 1
+    },
+    {
+     "case_id": "2026-OSO-M-598224|598224-15",
+     "rank": 145,
+     "municipality": "Košice - Západ",
+     "documents": [
+      "6fcd5bc67bcc4045"
+     ],
+     "values": 6,
+     "match": 4,
+     "classes": {
+      "match": 4,
+      "ocr_error": 2
+     },
+     "contest_votes_compared": 5
+    },
+    {
+     "case_id": "2026-OSO-C-599981-5|598224-10",
+     "rank": 148,
+     "municipality": "Košice - Západ",
+     "documents": [
+      "e79bb95baca6ff6f"
+     ],
+     "values": 5,
+     "match": 5,
+     "classes": {
+      "match": 5
+     },
+     "contest_votes_compared": 0
+    },
+    {
+     "case_id": "2026-OSO-C-599981-5|598224-2",
+     "rank": 150,
+     "municipality": "Košice - Západ",
+     "documents": [
+      "442a58e27d3fb5cf"
+     ],
+     "values": 4,
+     "match": 4,
+     "classes": {
+      "match": 4
+     },
+     "contest_votes_compared": 0
+    },
+    {
+     "case_id": "2026-OSO-M-598224|598224-16",
+     "rank": 158,
+     "municipality": "Košice - Západ",
+     "documents": [
+      "7b94cdbbbfd39612"
+     ],
+     "values": 7,
+     "match": 5,
+     "classes": {
+      "match": 5,
+      "ocr_error": 2
+     },
+     "contest_votes_compared": 6
+    },
+    {
+     "case_id": "2026-OSO-M-598224|598224-11",
+     "rank": 159,
+     "municipality": "Košice - Západ",
+     "documents": [
+      "7dea83852e62639d"
+     ],
+     "values": 5,
+     "match": 4,
+     "classes": {
+      "match": 4,
+      "ocr_error": 1
+     },
+     "contest_votes_compared": 4
+    },
+    {
+     "case_id": "2026-OSO-M-598224|598224-25",
+     "rank": 162,
+     "municipality": "Košice - Západ",
+     "documents": [
+      "2709b73f8df75a5d"
+     ],
+     "values": 7,
+     "match": 4,
+     "classes": {
+      "match": 4,
+      "ocr_error": 3
+     },
+     "contest_votes_compared": 6
+    },
+    {
+     "case_id": "2026-OSO-C-504378-1|504378-4",
+     "rank": 168,
+     "municipality": "Holíč",
+     "documents": [
+      "5549b182ed9fd3c5"
+     ],
+     "values": 26,
+     "match": 26,
+     "classes": {
+      "match": 26
+     },
+     "contest_votes_compared": 21
+    },
+    {
+     "case_id": "2026-OSO-M-598224|598224-10",
+     "rank": 169,
+     "municipality": "Košice - Západ",
+     "documents": [
+      "e79bb95baca6ff6f"
+     ],
+     "values": 11,
+     "match": 11,
+     "classes": {
+      "match": 11
+     },
+     "contest_votes_compared": 6
+    },
+    {
+     "case_id": "2026-OSK-C-705|520691-1",
+     "rank": 182,
+     "municipality": "Radvaň nad Laborcom",
+     "documents": [
+      "792af378cfd9ffa0"
+     ],
+     "values": 4,
+     "match": 4,
+     "classes": {
+      "match": 4
+     },
+     "contest_votes_compared": 0
+    },
+    {
+     "case_id": "2026-OSO-C-506524-1|506524-2",
+     "rank": 188,
+     "municipality": "Stará Turá",
+     "documents": [
+      "e96df9008c7cdc79"
+     ],
+     "values": 17,
+     "match": 17,
+     "classes": {
+      "match": 17
+     },
+     "contest_votes_compared": 17
+    },
+    {
+     "case_id": "2026-OSO-C-513881-5|513881-41",
+     "rank": 198,
+     "municipality": "Prievidza",
+     "documents": [
+      "a86247453766716b"
+     ],
+     "values": 9,
+     "match": 9,
+     "classes": {
+      "match": 9
+     },
+     "contest_votes_compared": 4
+    },
+    {
+     "case_id": "precinct|513946-1",
+     "rank": 240,
+     "municipality": "Čereňany",
+     "documents": [
+      "2b1d50f1abb441a2",
+      "3f366bd4a07130b6"
+     ],
+     "values": 86,
+     "match": 86,
+     "classes": {
+      "match": 86
+     },
+     "contest_votes_compared": 76
+    },
+    {
+     "case_id": "2026-OSO-M-509540|509540-18",
+     "rank": 254,
+     "municipality": "Dolný Kubín",
+     "documents": [
+      "efe677763c6e0922"
+     ],
+     "values": 4,
+     "match": 1,
+     "classes": {
+      "match": 1,
+      "ocr_error": 3
+     },
+     "contest_votes_compared": 1
+    },
+    {
+     "case_id": "2026-OSK-C-807|543853-4",
+     "rank": 263,
+     "municipality": "Veľké Kapušany",
+     "documents": [
+      "d2e011ddad466cb2"
+     ],
+     "values": 38,
+     "match": 32,
+     "classes": {
+      "match": 32,
+      "ocr_error": 6
+     },
+     "contest_votes_compared": 36
+    },
+    {
+     "case_id": "2026-OSO-C-526436-1|526436-1",
+     "rank": 276,
+     "municipality": "Bystrany",
+     "documents": [
+      "5d3f45da53ea5b75"
+     ],
+     "values": 59,
+     "match": 58,
+     "classes": {
+      "match": 58,
+      "ocr_error": 1
+     },
+     "contest_votes_compared": 54
+    },
+    {
+     "case_id": "2026-OSO-C-518379-2|518379-2",
+     "rank": 279,
+     "municipality": "Dúbravy",
+     "documents": [
+      "f9199ca43b314e45"
+     ],
+     "values": 7,
+     "match": 7,
+     "classes": {
+      "match": 7
+     },
+     "contest_votes_compared": 2
+    },
+    {
+     "case_id": "2026-OSO-C-513881-2|513881-14",
+     "rank": 303,
+     "municipality": "Prievidza",
+     "documents": [
+      "607853d38b3efdc4"
+     ],
+     "values": 25,
+     "match": 24,
+     "classes": {
+      "match": 24,
+      "ocr_error": 1
+     },
+     "contest_votes_compared": 20
+    },
+    {
+     "case_id": "2026-OSO-C-599981-5|598224-12",
+     "rank": 335,
+     "municipality": "Košice - Západ",
+     "documents": [
+      "5c0b73f0b3eb8007"
+     ],
+     "values": 4,
+     "match": 0,
+     "classes": {
+      "ocr_error": 4
+     },
+     "contest_votes_compared": 0
+    },
+    {
+     "case_id": "2026-OSO-C-514365-1|514365-1",
+     "rank": 339,
+     "municipality": "Rudnianska Lehota",
+     "documents": [
+      "985f7a61e0ddd6f1"
+     ],
+     "values": 5,
+     "match": 5,
+     "classes": {
+      "match": 5
+     },
+     "contest_votes_compared": 0
+    },
+    {
+     "case_id": "2026-OSO-M-513881|513881-43",
+     "rank": 352,
+     "municipality": "Prievidza",
+     "documents": [
+      "527a1408d001f15c"
+     ],
+     "values": 10,
+     "match": 10,
+     "classes": {
+      "match": 10
+     },
+     "contest_votes_compared": 7
+    },
+    {
+     "case_id": "2026-OSK-C-201|501638-1",
+     "rank": 394,
+     "municipality": "Hviezdoslavov",
+     "documents": [
+      "e83d98f8d92bfb3c"
+     ],
+     "values": 10,
+     "match": 6,
+     "classes": {
+      "match": 6,
+      "ocr_error": 4
+     },
+     "contest_votes_compared": 5
+    },
+    {
+     "case_id": "2026-OSO-M-598224|598224-3",
+     "rank": 399,
+     "municipality": "Košice - Západ",
+     "documents": [
+      "a0ae6d444a00272c"
+     ],
+     "values": 8,
+     "match": 7,
+     "classes": {
+      "match": 7,
+      "ocr_error": 1
+     },
+     "contest_votes_compared": 6
+    },
+    {
+     "case_id": "2026-OSO-C-509493-1|509493-3",
+     "rank": 400,
+     "municipality": "Svrčinovec",
+     "documents": [
+      "54539f9594ac47b1"
+     ],
+     "values": 6,
+     "match": 6,
+     "classes": {
+      "match": 6
+     },
+     "contest_votes_compared": 1
+    },
+    {
+     "case_id": "2026-OSK-C-610|516520-2",
+     "rank": 454,
+     "municipality": "Vinica",
+     "documents": [
+      "b817a12bd6f92b8a"
+     ],
+     "values": 22,
+     "match": 22,
+     "classes": {
+      "match": 22
+     },
+     "contest_votes_compared": 17
+    },
+    {
+     "case_id": "precinct|522708-1",
+     "rank": 483,
+     "municipality": "Laškovce",
+     "documents": [
+      "9ab330e0526fc307"
+     ],
+     "values": 67,
+     "match": 67,
+     "classes": {
+      "match": 67
+     },
+     "contest_votes_compared": 62
+    }
+   ]
+  }
+ },
+ "overvolby_2022": {
+  "claims_counting_error": 116,
+  "verdicts": {
+   "confirmed": 33,
+   "contradicted": 30,
+   "not_detected_plausible": 36,
+   "supported": 17
+  },
+  "heuristics_not_testable": 72,
+  "our_cases_not_in_overvolby": 50
+ },
+ "court_2022": {
+  "dockets_in_file": 113,
+  "repeat_election_dockets": 4,
+  "dockets_without_published_decision": 7,
+  "published_decisions": 102,
+  "outcomes": {
+   "dismissed_on_merits": 39,
+   "election_declared_invalid": 9,
+   "inadmissible_rejected": 44,
+   "result_annulled_other_candidate_elected": 5,
+   "withdrawn_or_stopped": 5
+  },
+  "winner_changed": [
+   "Terany",
+   "Drňa",
+   "Stará Lesná",
+   "Súdovce",
+   "Malé Hoste"
+  ],
+  "court_counted_ballots": 25,
+  "count_differs_from_record": 16,
+  "record_confirmed": 6,
+  "no_figures": 3,
+  "differing_contests_flagged_by_register": [
+   "Drňa",
+   "Súdovce"
+  ]
+ },
+ "deepdig": {
+  "base_rate": {
+   "replays": 895,
+   "pooled_by_sample": {
+    "target2026_from0_control": {
+     "n": 99,
+     "surfaced": 0
+    },
+    "target2022_from2022_seat": {
+     "n": 95,
+     "surfaced": 46
+    },
+    "target2026_from2022_seat": {
+     "n": 97,
+     "surfaced": 43
+    },
+    "target2026_from2026_rand": {
+     "n": 84,
+     "surfaced": 38
+    },
+    "target2022_from2022_rand": {
+     "n": 167,
+     "surfaced": 79
+    },
+    "target2022_from0_control": {
+     "n": 99,
+     "surfaced": 0
+    },
+    "target2026_from2022_rand": {
+     "n": 168,
+     "surfaced": 71
+    },
+    "target2022_from2026_rand": {
+     "n": 86,
+     "surfaced": 22
+    }
+   },
+   "seat_changing_replays": {
+    "target2022_from2026": {
+     "n": 16,
+     "surfaced": 3
+    },
+    "target2022_from2022": {
+     "n": 149,
+     "surfaced": 71
+    },
+    "target2026_from2022": {
+     "n": 149,
+     "surfaced": 66
+    },
+    "target2026_from2026": {
+     "n": 18,
+     "surfaced": 5
+    }
+   },
+   "events_2022": 22,
+   "sum_p_seat_2022_events": {
+    "in2022": 5.84,
+    "in2026": 5.77
+   },
+   "events_changed_seat_2022": 5
+  },
+  "seatflip": {
+   "2022": {
+    "contests_with_flipping_edit": 4782,
+    "contested": 5191,
+    "P_ge_0.9": 4,
+    "P_ge_0.5": 12,
+    "P_ge_0.1": 33,
+    "top5": [
+     {
+      "rank": 1,
+      "contest_id": "2022-OSO-C-506745-1",
+      "unit": "Trnava, obvod 1",
+      "P": 1.0
+     },
+     {
+      "rank": 2,
+      "contest_id": "2022-OSO-C-510262-1",
+      "unit": "Liptovský Mikuláš, obvod 1",
+      "P": 1.0
+     },
+     {
+      "rank": 3,
+      "contest_id": "2022-OSO-C-522872-1",
+      "unit": "Pavlovce nad Uhom, obvod 1",
+      "P": 1.0
+     },
+     {
+      "rank": 4,
+      "contest_id": "2022-OSO-C-599981-14",
+      "unit": "Košice, obvod 14",
+      "P": 0.996
+     },
+     {
+      "rank": 5,
+      "contest_id": "2022-OSO-C-506010-1",
+      "unit": "Horná Súča, obvod 1",
+      "P": 0.889
+     }
+    ],
+    "rank_2022-OSO-C-506745-1": 1,
+    "rank_2022-OSO-C-510262-1": 2,
+    "rank_2022-OSK-C-611": 52,
+    "calibration_thresholds": {
+     "0.001": {
+      "recall_contest": 0.40061162079510704,
+      "recall_contest_3plus_precincts": 0.9516129032258065,
+      "recall_true_edit": 0.22629969418960244,
+      "null_flagged": 1005,
+      "null_flagged_new": 163,
+      "false_alarm_rate": 0.19427798182872608,
+      "false_alarm_rate_new": 0.03150976222694761
+     },
+     "0.01": {
+      "recall_contest": 0.20795107033639143,
+      "recall_contest_3plus_precincts": 0.8064516129032258,
+      "recall_true_edit": 0.19571865443425077,
+      "null_flagged": 88,
+      "null_flagged_new": 24,
+      "false_alarm_rate": 0.017011405374057608,
+      "false_alarm_rate_new": 0.004639474192924802
+     },
+     "0.05": {
+      "recall_contest": 0.18042813455657492,
+      "recall_contest_3plus_precincts": 0.7580645161290323,
+      "recall_true_edit": 0.1559633027522936,
+      "null_flagged": 48,
+      "null_flagged_new": 18,
+      "false_alarm_rate": 0.009278948385849604,
+      "false_alarm_rate_new": 0.0034796056446936012
+     },
+     "0.1": {
+      "recall_contest": 0.1651376146788991,
+      "recall_contest_3plus_precincts": 0.7096774193548387,
+      "recall_true_edit": 0.14678899082568808,
+      "null_flagged": 31,
+      "null_flagged_new": 10,
+      "false_alarm_rate": 0.005992654165861202,
+      "false_alarm_rate_new": 0.0019331142470520007
+     },
+     "0.5": {
+      "recall_contest": 0.13761467889908258,
+      "recall_contest_3plus_precincts": 0.5967741935483871,
+      "recall_true_edit": 0.09480122324159021,
+      "null_flagged": 14,
+      "null_flagged_new": 8,
+      "false_alarm_rate": 0.0027063599458728013,
+      "false_alarm_rate_new": 0.0015464913976416005
+     },
+     "0.9": {
+      "recall_contest": 0.09480122324159021,
+      "recall_contest_3plus_precincts": 0.41935483870967744,
+      "recall_true_edit": 0.06116207951070336,
+      "null_flagged": 7,
+      "null_flagged_new": 4,
+      "false_alarm_rate": 0.0013531799729364006,
+      "false_alarm_rate_new": 0.0007732456988208003
+     }
+    },
+    "calibration_by_precincts_delta": [
+     {
+      "prec_group": "1",
+      "delta_group": "100+",
+      "n": 89,
+      "recall_05": 0.011235955056179775,
+      "recall_01": 0.011235955056179775
+     },
+     {
+      "prec_group": "1",
+      "delta_group": "20-99",
+      "n": 116,
+      "recall_05": 0.0,
+      "recall_01": 0.0
+     },
+     {
+      "prec_group": "1",
+      "delta_group": "<20",
+      "n": 26,
+      "recall_05": 0.0,
+      "recall_01": 0.0
+     },
+     {
+      "prec_group": "2",
+      "delta_group": "100+",
+      "n": 27,
+      "recall_05": 0.25925925925925924,
+      "recall_01": 0.3333333333333333
+     },
+     {
+      "prec_group": "2",
+      "delta_group": "20-99",
+      "n": 6,
+      "recall_05": 0.0,
+      "recall_01": 0.0
+     },
+     {
+      "prec_group": "2",
+      "delta_group": "<20",
+      "n": 1,
+      "recall_05": 0.0,
+      "recall_01": 0.0
+     },
+     {
+      "prec_group": "3-4",
+      "delta_group": "100+",
+      "n": 10,
+      "recall_05": 0.7,
+      "recall_01": 0.8
+     },
+     {
+      "prec_group": "3-4",
+      "delta_group": "20-99",
+      "n": 9,
+      "recall_05": 0.2222222222222222,
+      "recall_01": 0.2222222222222222
+     },
+     {
+      "prec_group": "3-4",
+      "delta_group": "<20",
+      "n": 1,
+      "recall_05": 0.0,
+      "recall_01": 0.0
+     },
+     {
+      "prec_group": "5+",
+      "delta_group": "100+",
+      "n": 31,
+      "recall_05": 0.8064516129032258,
+      "recall_01": 0.8709677419354839
+     },
+     {
+      "prec_group": "5+",
+      "delta_group": "20-99",
+      "n": 11,
+      "recall_05": 0.2727272727272727,
+      "recall_01": 0.6363636363636364
+     }
+    ]
+   },
+   "2026": {
+    "contests_with_flipping_edit": 4602,
+    "contested": 5009,
+    "P_ge_0.9": 0,
+    "P_ge_0.5": 2,
+    "P_ge_0.1": 11,
+    "top5": [
+     {
+      "rank": 1,
+      "contest_id": "2026-OSO-C-508047-1",
+      "unit": "Limbach, obvod 1",
+      "P": 0.748
+     },
+     {
+      "rank": 2,
+      "contest_id": "2026-OSO-C-502031-2",
+      "unit": "Levice, obvod 2",
+      "P": 0.614
+     },
+     {
+      "rank": 3,
+      "contest_id": "2026-OSO-C-599981-13",
+      "unit": "Košice, obvod 13",
+      "P": 0.445
+     },
+     {
+      "rank": 4,
+      "contest_id": "2026-OSO-C-501280-1",
+      "unit": "Nesvady, obvod 1",
+      "P": 0.247
+     },
+     {
+      "rank": 5,
+      "contest_id": "2026-OSO-C-509256-3",
+      "unit": "Kysucké Nové Mesto, obvod 3",
+      "P": 0.209
+     }
+    ],
+    "calibration_thresholds": {
+     "0.001": {
+      "recall_contest": 0.3867069486404834,
+      "recall_contest_3plus_precincts": 0.9841269841269841,
+      "recall_true_edit": 0.23564954682779457,
+      "null_flagged": 890,
+      "null_flagged_new": 159,
+      "false_alarm_rate": 0.17824954936911677,
+      "false_alarm_rate_new": 0.03184458241538153
+     },
+     "0.01": {
+      "recall_contest": 0.229607250755287,
+      "recall_contest_3plus_precincts": 0.8888888888888888,
+      "recall_true_edit": 0.2054380664652568,
+      "null_flagged": 56,
+      "null_flagged_new": 25,
+      "false_alarm_rate": 0.011215701982775887,
+      "false_alarm_rate_new": 0.005007009813739235
+     },
+     "0.05": {
+      "recall_contest": 0.21148036253776434,
+      "recall_contest_3plus_precincts": 0.8095238095238095,
+      "recall_true_edit": 0.19637462235649547,
+      "null_flagged": 22,
+      "null_flagged_new": 9,
+      "false_alarm_rate": 0.004406168636090527,
+      "false_alarm_rate_new": 0.0018025235329461246
+     },
+     "0.1": {
+      "recall_contest": 0.1933534743202417,
+      "recall_contest_3plus_precincts": 0.746031746031746,
+      "recall_true_edit": 0.1661631419939577,
+      "null_flagged": 14,
+      "null_flagged_new": 10,
+      "false_alarm_rate": 0.0028039254956939716,
+      "false_alarm_rate_new": 0.002002803925495694
+     },
+     "0.5": {
+      "recall_contest": 0.16012084592145015,
+      "recall_contest_3plus_precincts": 0.6190476190476191,
+      "recall_true_edit": 0.1268882175226586,
+      "null_flagged": 4,
+      "null_flagged_new": 3,
+      "false_alarm_rate": 0.0008011215701982776,
+      "false_alarm_rate_new": 0.0006008411776487082
+     },
+     "0.9": {
+      "recall_contest": 0.12386706948640483,
+      "recall_contest_3plus_precincts": 0.5238095238095238,
+      "recall_true_edit": 0.07250755287009064,
+      "null_flagged": 1,
+      "null_flagged_new": 1,
+      "false_alarm_rate": 0.0002002803925495694,
+      "false_alarm_rate_new": 0.0002002803925495694
+     }
+    },
+    "calibration_by_precincts_delta": [
+     {
+      "prec_group": "1",
+      "delta_group": "100+",
+      "n": 95,
+      "recall_05": 0.010526315789473684,
+      "recall_01": 0.010526315789473684
+     },
+     {
+      "prec_group": "1",
+      "delta_group": "20-99",
+      "n": 114,
+      "recall_05": 0.0,
+      "recall_01": 0.0
+     },
+     {
+      "prec_group": "1",
+      "delta_group": "<20",
+      "n": 26,
+      "recall_05": 0.0,
+      "recall_01": 0.0
+     },
+     {
+      "prec_group": "2",
+      "delta_group": "100+",
+      "n": 24,
+      "recall_05": 0.5416666666666666,
+      "recall_01": 0.625
+     },
+     {
+      "prec_group": "2",
+      "delta_group": "20-99",
+      "n": 9,
+      "recall_05": 0.0,
+      "recall_01": 0.1111111111111111
+     },
+     {
+      "prec_group": "3-4",
+      "delta_group": "100+",
+      "n": 12,
+      "recall_05": 0.4166666666666667,
+      "recall_01": 0.5833333333333334
+     },
+     {
+      "prec_group": "3-4",
+      "delta_group": "20-99",
+      "n": 2,
+      "recall_05": 0.0,
+      "recall_01": 0.0
+     },
+     {
+      "prec_group": "5+",
+      "delta_group": "100+",
+      "n": 39,
+      "recall_05": 0.7692307692307693,
+      "recall_01": 0.8717948717948718
+     },
+     {
+      "prec_group": "5+",
+      "delta_group": "20-99",
+      "n": 9,
+      "recall_05": 0.4444444444444444,
+      "recall_01": 0.6666666666666666
+     },
+     {
+      "prec_group": "5+",
+      "delta_group": "<20",
+      "n": 1,
+      "recall_05": 0.0,
+      "recall_01": 0.0
+     }
+    ]
+   },
+   "outputs_mtime_utc": "2026-10-25 21:13"
+  },
+  "close_contest_sweep": {
+   "contests": 645,
+   "by_kind": {
+    "mayor": 47,
+    "regional_council": 1,
+    "council": 597
+   },
+   "records": 1077,
+   "contests_no_tested_cell": 116,
+   "contests_with_protocol_cells": 55,
+   "protocol_cells": 150,
+   "decisive_candidates": 1689,
+   "decisive_cells": 2732,
+   "flip_supporting": 998,
+   "flip_supporting_p01": 16,
+   "min_p": 0.002173866087686438,
+   "mde": {
+    "tested": 2064,
+    "median": 60.47004408301112,
+    "le_need": 0,
+    "le10": 26,
+    "le50": 805,
+    "le100": 1611
+   }
+  },
+  "czech_replica": {
+   "2022": {
+    "template_findings": 466,
+    "changes_elected": 37,
+    "by_dopad": {
+     "Mění mandáty": 27,
+     "Bez vlivu": 429,
+     "Může změnit mandáty": 2,
+     "Mění zvolené": 8
+    }
+   },
+   "2026": {
+    "template_findings": 330,
+    "changes_elected": 26,
+    "by_dopad": {
+     "Bez vlivu": 304,
+     "Mění mandáty": 17,
+     "Mění zvolené": 9
+    }
+   }
+  },
+  "city_osk": {
+   "2022": {
+    "osk": {
+     "contests": 96,
+     "min_ratio": 0.27,
+     "min_contest": "2022-OSK-C-611",
+     "below_1": [
+      "2022-OSK-C-611",
+      "2022-OSK-C-601",
+      "2022-OSK-C-807"
+     ]
+    },
+    "city": {
+     "contests": 30,
+     "min_ratio": 0.36,
+     "min_contest": "2022-OSO-C-599981-6",
+     "below_1": [
+      "2022-OSO-C-599981-6"
+     ]
+    }
+   },
+   "2026": {
+    "osk": {
+     "contests": 95,
+     "min_ratio": 1.2,
+     "min_contest": "2026-OSK-C-207",
+     "below_1": []
+    },
+    "city": {
+     "contests": 25,
+     "min_ratio": 1.1,
+     "min_contest": "2026-OSO-C-599981-5",
+     "below_1": []
+    }
+   }
+  },
+  "district_seats": {
+   "municipalities": 191,
+   "districts": 650,
+   "official_found_municipalities": 191,
+   "official_found_districts": 650,
+   "match_municipalities": 190,
+   "match_districts": 648,
+   "lower_bound_municipalities": [
+    "Veľký Ďur"
+   ],
+   "not_found_municipalities": [],
+   "split_differs_from_2022": 53
+  },
+  "record_shortfall": {
+   "2022": {
+    "B_strong": 5,
+    "C_ambiguous": 11,
+    "B": [
+     "508179-6",
+     "529320-69",
+     "598186-16",
+     "518158-4",
+     "598224-24"
+    ]
+   },
+   "2026": {
+    "B_strong": 1,
+    "C_ambiguous": 8,
+    "B": [
+     "500011-29"
+    ]
+   }
+  },
+  "sorted_record": {
+   "2022": {
+    "B_strong": 1,
+    "C_ambiguous": 3
+   },
+   "2026": {}
+  }
+ },
+ "cited": {
+  "base_rate": {
+   "source": "docs/deepdig/base_rate.md (baserate estimate on runs /tmp/br_2022, /tmp/br_2026; posterior draws)",
+   "expected_2026_seat_changing_errors_lower_bound": 5.8,
+   "interval90": [
+    3.5,
+    8.9
+   ],
+   "P0": 0.008,
+   "expected_2026_seat_changing_errors_recall_corrected": 12,
+   "P0_recall_corrected": 0.0001,
+   "expected_surfaced_lower_bound": 2.8,
+   "surfaced_interval90": [
+    1.4,
+    4.8
+   ],
+   "P0_surfaced": 0.087,
+   "expected_surfaced_recall_corrected": 4.4,
+   "P0_surfaced_recall_corrected": 0.017,
+   "conditional_test_P_k3_k4_k5": [
+    0.13,
+    0.068,
+    0.035
+   ],
+   "oso_vote_errors_outside_bratislava": {
+    "2022": 8,
+    "2026": 1,
+    "p": 0.039,
+    "without_court_found": [
+     6,
+     1,
+     0.125
+    ]
+   }
+  },
+  "old_detector_replay": {
+   "source": "docs/deepdig/old_detector_replay.md (worktree at e2ee5a2, not kept)",
+   "old_register_cases": 631,
+   "old_class1": 20,
+   "old_class2": 8,
+   "already_reviewed": 19,
+   "unreviewed_leads": 10,
+   "survive_triage": 0
+  },
+  "czech_replica_triage_2026": {
+   "source": "docs/deepdig/czech_replica.md §3",
+   "outcome_changing_items": 27,
+   "contradicted_by_signed_record": 3,
+   "impossible": 1,
+   "bloc_or_persistent": 13,
+   "reviewed_probable_genuine": 9,
+   "expected_real_errors": [
+    0.05,
+    0.3
+   ]
+  },
+  "close_contest_sweep_reviews": {
+   "source": "docs/deepdig/close_contest_sweep.md §1, §4–§5",
+   "reviews": 48,
+   "inconclusive": 4
+  }
+ }
+}

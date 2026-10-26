@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="sk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<title>Vydrník, údaje o účasti, okrsok č. 1 (Vydrník) – Volebný audit</title>
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<a class="skip" href="#obsah">Preskočiť na obsah</a>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../../index.html">Volebný audit<small>komunálne a krajské voľby</small></a>
+    <nav aria-label="Hlavná navigácia">
+      <ul>
+        <li><a href="../../index.html">Prehľad</a></li>
+        <li><a href="../../nalezy.html">Nálezy</a></li>
+        <li><a href="../../okresy.html">Okresy</a></li>
+        <li><a href="../../tesne.html">Tesné výsledky</a></li>
+        <li><a href="../../2026.html">Voľby 2026</a></li>
+        <li><a href="../../metodika.html">Metodika</a></li>
+        <li><a href="../../o-projekte.html">O projekte</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="obsah" class="wrap">
+<p class="crumbs"><a href="../../index.html">Prehľad</a> / <a href="../../nalezy.html#y=2026">Nálezy 2026</a> / Prešovský kraj / <a href="../../nalezy.html#y=2026&amp;ok=Poprad">Poprad</a> / <a href="../../2026/obec/524093.html">Vydrník</a></p>
+<h1>Vydrník, údaje o účasti, okrsok č. 1 (Vydrník)</h1>
+<p class="lede">Prípad č. 183 v poradí na overenie (2026). 1 nález z 1 nezávislej skupiny dôkazov (aritmetika záznamov).</p>
+<div class="badges"><span>Najsilnejší stupeň: <span class="tier" title="Nezvyčajné čísla, ktoré môžu mať bežné vysvetlenie (domáci kandidát, miestna kampaň, malý okrsok). Väčšina takýchto nálezov pravdepodobne nie je chybou."><span class="stamp t-C" aria-hidden="true">C</span>Nejednoznačný signál</span></span><span>Vplyv: <span class="oc o-0">Netýka sa hlasov</span></span><span>Kritická kontrola: <span class="rv rv-none">neoverené</span></span></div>
+<div class="caveat"><p><strong>Toto je hypotéza, nie zistenie.</strong> Čísla nižšie ukazujú, čo je v zverejnených údajoch nezvyčajné a ktorá oprava by to vysvetlila. Či sa chyba naozaj stala, možno overiť len v originálnej zápisnici okrskovej volebnej komisie; o úmysle tieto údaje nehovoria nič.</p></div>
+<h2 id="kde">Kde</h2><dl class="facts"><dt>Kraj</dt><dd>Prešovský kraj</dd><dt>Okres</dt><dd>Poprad</dd><dt>Obec</dt><dd><a href="../../2026/obec/524093.html">Vydrník</a> <span class="id">524093</span></dd><dt>Okrsok</dt><dd>okrsok č. 1 (Vydrník) <span class="id">524093-1</span></dd></dl>
+<h2 id="opravy">Navrhované opravy a iné vysvetlenia</h2>
+<h3>Záznamy o účasti: iný, bližšie neurčený mechanizmus</h3>
+<p>Konkurenčné vysvetlenia, ktoré detektor zvažoval:</p><ul><li>samosprávny kraj: odovzdané obálky 540 → 590 (preklep číslice, zisk 3,6)</li><li>samosprávny kraj: platné lístky (zastupiteľstvo) 271 → 211 (preklep číslice, zisk 2,2)</li><li>obec / mestská časť: odovzdané obálky 627 → 629 (preklep číslice, zisk 1,6)</li><li>oprávnený rozdiel (bez chyby prepisu)</li></ul>
+<h2 id="vplyv">Vplyv na výsledok (prepočítaný)</h2>
+<p>Hodnotenie prípadu: <span class="oc o-0">Netýka sa hlasov</span>.</p>
+<p>Nález sa týka údajov o účasti v okrsku (počty voličov, obálok, platných lístkov). Tie do prideľovania mandátov priamo nevstupujú, preto vplyv na zvolených nepočítame.</p>
+<h2 id="dokazy">Dôkazy jednotlivých detektorov</h2>
+<section class="finding" id="f-novel-turnout-2026---524093-1-gapPE"><h3><span class="stamp t-C" aria-hidden="true">C</span>Záznamy o účasti: iný, bližšie neurčený mechanizmus</h3><dl class="facts"><dt>Detektor</dt><dd>Záznamy o účasti <code>novel_turnout</code> verzia 1.0</dd><dt>Skupina dôkazov</dt><dd>aritmetika záznamov</dd><dt>Stupeň</dt><dd><span class="tier" title="Nezvyčajné čísla, ktoré môžu mať bežné vysvetlenie (domáci kandidát, miestna kampaň, malý okrsok). Väčšina takýchto nálezov pravdepodobne nie je chybou."><span class="stamp t-C" aria-hidden="true">C</span>Nejednoznačný signál</span></dd><dt>Mechanizmus</dt><dd>iný, bližšie neurčený mechanizmus <code>other</code></dd><dt>Vplyv</dt><dd><span class="oc o-0">Netýka sa hlasov</span></dd><dt>Skóre</dt><dd>1,67</dd><dt>p</dt><dd>1,9·10<sup>−5</sup></dd><dt>q (podiel falošných objavov)</dt><dd>0,041</dd></dl><details class="en"><summary>Technická poznámka detektora (anglicky)</summary><p lang="en">unexplained: relation gapPE (OSK.participated, OSK.envelopes) has tail p 1.9e-05 (log p -13.2); best single edit OSK.envelopes 540-&gt;590 (digit_sub, gain 3.6) stays below the reporting bar (10 nats)</p></details><details><summary>Technické údaje detektora (JSON)</summary><pre>{
+ &quot;finding_id&quot;: &quot;novel_turnout:2026:-:524093-1:gapPE&quot;,
+ &quot;observed&quot;: {
+  &quot;E_OSK&quot;: 540,
+  &quot;E_OSO&quot;: 627,
+  &quot;P_OSK&quot;: 623,
+  &quot;P_OSO&quot;: 630,
+  &quot;R_OSK&quot;: 930,
+  &quot;R_OSO&quot;: 930,
+  &quot;R_prev_year&quot;: 874.0,
+  &quot;VC_OSK&quot;: 271,
+  &quot;VC_OSO&quot;: 555,
+  &quot;VM_OSK&quot;: 430,
+  &quot;VM_OSO&quot;: 606,
+  &quot;sum_council_OSK&quot;: 1017,
+  &quot;sum_council_OSO&quot;: 3346,
+  &quot;sum_single_OSK&quot;: 430,
+  &quot;sum_single_OSO&quot;: 606
+ },
+ &quot;expected&quot;: {
+  &quot;fields&quot;: [
+   &quot;OSK.participated&quot;,
+   &quot;OSK.envelopes&quot;
+  ],
+  &quot;hard_broken&quot;: [],
+  &quot;relation&quot;: &quot;gapPE&quot;,
+  &quot;relations_broken&quot;: [
+   &quot;gapPE&quot;
+  ]
+ },
+ &quot;correction&quot;: [],
+ &quot;alternatives&quot;: [
+  &quot;OSK.envelopes 540-&gt;590 (digit_sub, gain 3.6)&quot;,
+  &quot;OSK.valid_council 271-&gt;211 (digit_sub, gain 2.2)&quot;,
+  &quot;OSO.envelopes 627-&gt;629 (digit_sub, gain 1.6)&quot;,
+  &quot;legitimate difference (no transcription error)&quot;
+ ]
+}</pre></details></section>
+<h2 id="overenie">Stav overenia</h2>
+<p>Tento prípad zatiaľ neprešiel nezávislou kritickou kontrolou.</p>
+<p>Obec zverejnila na svojom webe dokumenty s výsledkami volieb (<a href="../../2026.html#zapisnice">zbierka zápisníc</a>). Porovnanie s údajmi ŠÚ SR uvádza kritická kontrola, ak prípad preverila. Rozhodujúci je originálny dokument.</p><ul><li>zápisnica okrskovej komisie, okrsok 1: <a href="https://www.vydrnik.sk/evt_file.php?file=1183&amp;original=Z%C3%A1pisnica%20z%20volieb%20do%20VUC.pdf">zdroj na webe obce</a></li><li>zápisnica okrskovej komisie, okrsok 1: <a href="https://www.vydrnik.sk/evt_file.php?file=1183">zdroj na webe obce</a></li><li>uverejnenie výsledkov obcou: <a href="https://www.vydrnik.sk/evt_file.php?file=1181&amp;original=V%C3%BDsledky%20volieb%20do%20organov%20samopsr%C3%A1vy%20obce.pdf">zdroj na webe obce</a></li><li>uverejnenie výsledkov obcou: <a href="https://www.vydrnik.sk/evt_file.php?file=1181">zdroj na webe obce</a></li></ul>
+<h2 id="zdroje">Zdrojové záznamy</h2><p>Súbor a číslo riadku (riadok 1 je hlavička) v kódovanej podobe oficiálnych CSV súborov Štatistického úradu SR: oficiálne súbory s popisnou hlavičkou sme bez zmeny hodnôt previedli do formátu s kódmi stĺpcov, v akom vyšli výsledky roku 2022. Čísla riadkov sa preto vzťahujú na prevedený súbor; jeho kontrolný súčet SHA-256 je v časti <a href="../../o-projekte.html#povod-udajov">Pôvod údajov</a>.</p><ul><li><code>OSO2026_SK_tab02bf.csv</code> v archíve <a href="https://www.volbysr.sk/oso/files/OSO2026_SK_csv.zip">OSO2026_SK_csv.zip</a>, riadky 4638</li><li><code>OSK2026_SK_tab02bd.csv</code> v archíve <a href="https://www.volbysr.sk/osk/files/OSK2026_SK_csv.zip">OSK2026_SK_csv.zip</a>, riadky 4594</li></ul>
+<h2 id="ucast">Záznamy o účasti v okrsku</h2><p>Ten istý okrsok má samostatný záznam pre obecné voľby, pre krajské voľby a v Bratislave a Košiciach aj mestský záznam. Počty zapísaných voličov a obálok sa môžu legitímne mierne líšiť (voliči dopísaní vo volebný deň, rozdielna účasť). Zvýraznené sú polia, ktorých sa nález týka.</p><div class="scroll" tabindex="0" role="region" aria-label="Záznamy o účasti"><table class="tbl"><thead><tr><th scope="col">Záznam</th><th scope="col" class="n">zapísaní voliči</th><th scope="col" class="n">zúčastnení</th><th scope="col" class="n">odovzdané obálky</th><th scope="col" class="n">platné lístky (starosta / predseda)</th><th scope="col" class="n">platné lístky (zastupiteľstvo)</th><th scope="col">Zdrojový riadok</th></tr></thead><tbody><tr><td>samosprávny kraj</td><td class="n">930</td><td class="n">623</td><td class="n">540</td><td class="n">430</td><td class="n">271</td><td><code>OSK2026_SK_tab02bd.csv:4594</code></td></tr><tr><td>obec / mestská časť</td><td class="n">930</td><td class="n">630</td><td class="n">627</td><td class="n">606</td><td class="n">555</td><td><code>OSO2026_SK_tab02bf.csv:4638</code></td></tr></tbody></table></div>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <p><strong>Štatistická anomália nie je dôkazom chyby. Chyba v zázname nie je dôkazom podvodu ani úmyslu.</strong>
+    Každý nález je hypotéza; potvrdiť ju alebo vyvrátiť možno len porovnaním s originálnou zápisnicou okrskovej volebnej komisie.</p>
+    <p>Nezávislý audit, nie oficiálny výsledok volieb. Zdroj údajov: Štatistický úrad SR. Údaje 2022: definitívne výsledky stiahnuté 25. 10. 2026; 2026: definitívne výsledky stiahnuté 26. 10. 2026. Verzia kódu 609365d86c08 + neuložené zmeny kódu. Stránka vygenerovaná 26. 10. 2026 15:00 UTC.</p>
+    <p><a href="../../o-projekte.html#ako-citat">Ako čítať tieto výsledky</a> · <a href="../../o-projekte.html#povod-udajov">Pôvod údajov</a> · <a href="../../o-projekte.html#kontakt">Kontakt a opravy</a></p>
+  </div>
+</footer>
+<script src="../../assets/app.js"></script>
+
+</body>
+</html>
